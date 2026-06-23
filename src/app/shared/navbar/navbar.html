@@ -5,9 +5,9 @@
   <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
 
     <!-- Logo -->
-    <a routerLink="/home"
-       style="font-family:'Space Mono',monospace; color:var(--rose); text-decoration:none"
-       class="text-xl tracking-widest uppercase">
+    <a href="#home"
+       style="font-family:'Lexend', sans-serif; color:var(--rose); text-decoration:none"
+       class="text-xl font-bold tracking-wide">
       Amal Sboui<span style="color:var(--plum)">_</span>
     </a>
 
@@ -16,8 +16,7 @@
       @for (link of links; track link.label) {
         <li>
           <a
-            [routerLink]="link.path"
-            routerLinkActive="active"
+            [href]="link.href"
             class="nav-link">
             {{ link.label }}
           </a>
@@ -31,7 +30,7 @@
       (click)="toggleMenu()"
       aria-label="Toggle menu">
       <span style="font-family:'Space Mono',monospace; color:var(--muted); font-size:0.75rem">
-        {{ menuOpen() ? '[close]' : '[menu]' }}
+        {{ menuOpen() ? 'Close' : 'Menu' }}
       </span>
     </button>
 
@@ -44,8 +43,7 @@
       style="border-top: 1px solid var(--border); background: var(--surface)">
       @for (link of links; track link.label) {
         <a 
-          [routerLink]="link.path"
-          routerLinkActive="active"
+          [href]="link.href"
           class="nav-link"
           (click)="closeMenu()">
           {{ link.label }}

@@ -7,6 +7,7 @@ export interface Project {
   tags: string[];
   github?: string;
   diagram?: string; // path to architecture diagram image
+  diagramLayout?: 'side' | 'full'; 
 }
 
 @Component({
@@ -29,7 +30,8 @@ projects: Project[] = [
       ],
       tags: ['Kubernetes', 'AWS EKS', 'Terraform', 'Linkerd', 'Tetragon', 'Prometheus', 'Grafana'],
       github: 'https://github.com/SecureSight-PFA/SecureSight',
-      diagram: 'assets/images/pipeline_securesight.svg'
+      diagram: 'assets/images/pipeline_securesight.svg',
+      diagramLayout: 'full'
     },
     {
       name: 'Distributed Observability Platform',
@@ -43,7 +45,8 @@ projects: Project[] = [
       ],
       tags: ['Go', 'Kafka', 'Docker', 'Prometheus', 'Loki', 'Grafana'],
       github: 'https://github.com/amalsboui/System-Monitoring-Project',
-      diagram: 'assets/images/pipeline_monitoring.png'
+      diagram: 'assets/images/pipeline_monitoring.png',
+      diagramLayout: 'side'
     },
     {
       name: 'Voting DApp',
@@ -56,7 +59,7 @@ projects: Project[] = [
         'Infrastructure (AKS, ACR, VNet, role assignments) defined and managed with Terraform Cloud'
       ],
       tags: ['React', 'Flask', 'Solidity', 'Docker', 'AKS', 'Terraform', 'GitHub Actions'],
-      github: 'https://github.com/amalsboui/Voting-Dapp'
+      github: 'https://github.com/amalsboui/Voting-Dapp', 
     },
     {
       name: 'PetSit',
@@ -69,7 +72,7 @@ projects: Project[] = [
         'Built-in AI assistant (GPT-4o) giving pet-care tips and recommending vets for health concerns'
       ],
       tags: ['NestJS', 'Angular', 'PostgreSQL', 'WebSockets', 'JWT'],
-      github: 'https://github.com/amalsboui/PetSit'
+      github: 'https://github.com/amalsboui/PetSit',
     },
     {
       name: 'Sentiment Analysis MLOps Platform',
@@ -83,7 +86,8 @@ projects: Project[] = [
       ],
       tags: ['Python', 'FastAPI', 'Docker', 'Jenkins', 'Terraform', 'Azure'],
       github: 'https://github.com/amalsboui/Sentiment-Analysis-MLOps',
-      diagram: 'assets/images/pipeline_mlops.png'
+      diagram: 'assets/images/pipeline_mlops.png',
+      diagramLayout: 'side'
       
     },
   ];

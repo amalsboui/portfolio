@@ -1,0 +1,41 @@
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(40, 48px);
+  grid-template-rows: repeat(30, 48px);
+  pointer-events: none;
+  z-index: 0;
+  gap: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.grid-cell {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(160, 120, 255, 0.03);
+  transition: all 0.15s ease-out;
+  background: transparent;
+  will-change: transform, opacity;
+  transform-origin: center;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+app-navbar, main, app-footer {
+  position: relative;
+  z-index: 1;
+}

@@ -15,6 +15,8 @@
 
   --text:      #dcdde8;
   --muted:     #8587a3;
+
+  --accent-warm: #f4a261;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -24,21 +26,20 @@ html { scroll-behavior: smooth; }
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   min-height: 100vh;
   background-image:
     linear-gradient(rgba(124, 147, 212, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(124, 147, 212, 0.06) 1px, transparent 1px);
   background-size: 48px 48px;
+  background-position: 0 0;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Lexend', sans-serif;
   font-weight: 700;       
-}
-body {
-  font-family: 'Lexend', sans-serif;
-  font-weight: 400;
 }
 
 /* ── Section layout ── */
@@ -51,7 +52,7 @@ body {
 
 /* ── Section title ── */
 .section-title {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-size: 1.4rem;
   color: var(--blue);
   margin-bottom: 2.5rem;
@@ -119,3 +120,26 @@ body {
 }
 .nav-link:hover { color: var(--text); }
 .nav-link.active { color: var(--blue); }
+/* ── Marquee animation ── */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  position: relative;
+  z-index: 2;
+  background: var(--bg);
+  border-color: var(--border);
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+  display: flex;
+  gap: 2rem; 
+  width: max-content;
+}

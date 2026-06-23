@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
 })
 export class Hero implements OnInit, OnDestroy {
   displayed = signal('');
-  private full = 'ICT Engineering Student.';
+  private full = '4th Year ICT Engineering Student.';
   private i = 0;
   private timer: ReturnType<typeof setInterval> | null = null;
 

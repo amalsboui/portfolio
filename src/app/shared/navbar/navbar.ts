@@ -3,7 +3,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 interface NavLink {
   label: string;
-  path: string;
+  href: string;
 }
 
 @Component({
@@ -19,10 +19,10 @@ export class Navbar {
   closeMenu() { this.menuOpen.set(false); }
 
   links: NavLink[] = [
-    { label: 'Home',     path: '/home' },
-    { label: 'About',    path: '/about' },
-    { label: 'Skills',   path: '/skills' },
-    { label: 'Projects', path: '/projects' },
-    { label: 'Contact',  path: '/contact' },
+    { label: 'About',      href: '#about' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Skills',     href: '#skills' },
+    { label: 'Projects',   href: '#projects' },
+    { label: 'Contact',    href: '#contact' },
   ];
 }

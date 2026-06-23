@@ -26,13 +26,39 @@
        class="px-6 py-3 rounded text-sm font-bold transition-opacity hover:opacity-90"
        style="background:var(--blue); color:#0e0e14;
               font-family:'Space Mono',monospace;">
-      view projects
+      View projects
     </a>
     <a routerLink="/contact"
        class="card px-6 py-3 rounded text-sm transition-colors"
        style="color:var(--blue); font-family:'Space Mono',monospace;">
-      get in touch
+      Get in touch
     </a>
   </div>
+  <!--
+  <div class="fade-up flex gap-8 mt-8 flex-wrap">
+  <div>
+    <p class="text-2xl font-bold" style="color: var(--blue)">4th</p>
+    <p class="text-xs" style="color: var(--muted)">Year Engineering</p>
+  </div>
+  <div>
+    <p class="text-2xl font-bold" style="color: var(--pink)">2</p>
+    <p class="text-xs" style="color: var(--muted)">AWS Certifications</p>
+  </div>
+</div> -->
+
+ <div class="overflow-hidden py-4 border-y marquee-container mt-27" style="border-color: var(--border)">
+    <div class="flex gap-8 whitespace-nowrap animate-marquee">
+      @for (word of ['AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Cloud Native', 'SRE']; track word) {
+        <span class="text-sm font-medium" style="color: var(--muted)">{{ word }} ✦</span>
+      }
+      @for (word of ['AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Cloud Native', 'SRE']; track word) {
+        <span class="text-sm font-medium" style="color: var(--muted)">{{ word }} ✦</span>
+      }
+      @for (word of ['AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Cloud Native', 'SRE']; track word) {
+        <span class="text-sm font-medium" style="color: var(--muted)">{{ word }} ✦</span>
+      }
+    </div>
+  </div>
+
 
 </section>

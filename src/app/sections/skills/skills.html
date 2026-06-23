@@ -1,17 +1,23 @@
 <section class="section">
   <h2 class="section-title">Skills</h2>
 
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
     @for (group of groups; track group.category) {
       <div class="card p-5">
-        <p class="text-xs mb-4 font-semibold uppercase tracking-wide" [style.color]="group.accent">
+        <p class="text-sm mb-4 font-bold" style="color: var(--text)">
           {{ group.category }}
         </p>
-        <ul class="space-y-2 list-none">
-          @for (item of group.items; track item) {
-            <li class="text-sm" style="color: var(--text)">{{ item }}</li>
+        <div class="flex flex-wrap gap-2">
+          @for (skill of group.items; track skill.name) {
+            <div class="flex items-center gap-2 px-3 py-2 rounded-md"
+                 style="background: var(--bg); border: 1px solid var(--border)">
+              @if (skill.icon) {
+                <img [src]="iconUrl(skill.icon)" [alt]="skill.name" class="w-4 h-4" />
+              }
+              <span class="text-xs font-medium" style="color: var(--muted)">{{ skill.name }}</span>
+            </div>
           }
-        </ul>
+        </div>
       </div>
     }
   </div>
