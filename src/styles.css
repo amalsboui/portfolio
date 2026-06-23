@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 @import "tailwindcss";
 
@@ -10,7 +10,8 @@
 
   --blue:      #7c93d4;   /* main accent */
   --plum:      #6d597a;   /* secondary accent */
-  --rose:      #b56576;   
+  --rose:      #b56576; 
+  --pink:      #d88fb0;  
 
   --text:      #dcdde8;
   --muted:     #8587a3;
@@ -32,8 +33,12 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Sora', sans-serif;
-  font-weight: 600;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;       
+}
+body {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
 }
 
 /* ── Section layout ── */

@@ -1,1 +1,51 @@
-<p>projects works!</p>
+<section class="section">
+  <h2 class="section-title">Projects</h2>
+
+        <div class="flex flex-col gap-8">
+            @for (project of projects; track project.name) {
+            <div class="card p-7 grid md:grid-cols-[1.1fr_380px] gap-7">
+
+        <div class="flex flex-col justify-between gap-5">
+            <div>
+            <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xl font-bold" style="color: var(--blue)">{{ project.name }}</h3>
+                @if (project.github) {
+                <a [href]="project.github" target="_blank" rel="noopener noreferrer"
+                    class="text-sm font-medium" style="color: var(--pink); text-decoration:none">
+                    View on GitHub →
+                </a>
+                }
+            </div>
+            <p class="text-sm leading-relaxed mb-4" style="color: var(--muted)">{{ project.description }}</p>
+
+            <ul class="space-y-2 list-none">
+                @for (point of project.highlights; track point) {
+                <li class="text-sm flex gap-2" style="color: var(--text)">
+                    <span style="color: var(--pink)">•</span>
+                    <span>{{ point }}</span>
+                </li>
+                }
+            </ul>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+            @for (tag of project.tags; track tag) {
+                <span class="badge badge-blue">{{ tag }}</span>
+            }
+            </div>
+        </div>
+
+        <div class="rounded-md p-3 flex items-center justify-center"
+            style="background: var(--bg); border: 1px solid var(--border); min-height: 380px;">
+            @if (project.diagram) {
+            <img [src]="project.diagram" [alt]="project.name + ' pipeline diagram'"
+                class="w-full h-full object-contain rounded" />
+            } @else {
+            <span class="text-xs text-center" style="color: var(--muted)">diagram coming soon</span>
+            }
+        </div>
+
+        </div>
+    }
+  </div>
+</section>

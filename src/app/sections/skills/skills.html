@@ -1,1 +1,18 @@
-<p>skills works!</p>
+<section class="section">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    @for (group of groups; track group.category) {
+      <div class="card p-5">
+        <p class="text-xs mb-4 font-semibold uppercase tracking-wide" [style.color]="group.accent">
+          {{ group.category }}
+        </p>
+        <ul class="space-y-2 list-none">
+          @for (item of group.items; track item) {
+            <li class="text-sm" style="color: var(--text)">{{ item }}</li>
+          }
+        </ul>
+      </div>
+    }
+  </div>
+</section>

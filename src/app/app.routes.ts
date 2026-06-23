@@ -7,7 +7,7 @@ import { Projects } from './sections/projects/projects';
 import { Skills } from './sections/skills/skills';
 
 export const routes: Routes = [
-    {   path: '', 
+    /*{   path: '', 
         component: MainLayout,
         children: [
         {path:'', redirectTo: 'home', pathMatch: 'full'},
@@ -18,5 +18,5 @@ export const routes: Routes = [
         {path: 'contact', component: Contact},
         ]
     },
-    {     path: '**', redirectTo: '' }
+    {     path: '**', redirectTo: '' }*/
 ]
