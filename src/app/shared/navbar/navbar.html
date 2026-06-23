@@ -1,1 +1,57 @@
-<p>navbar works!</p>
+<header
+  class="sticky top-0 z-50 backdrop-blur-md border-b"
+  style="background: rgba(14,14,20,0.8); border-color: var(--border)">
+
+  <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a routerLink="/home"
+       style="font-family:'Space Mono',monospace; color:var(--rose); text-decoration:none"
+       class="text-xl tracking-widest uppercase">
+      Amal Sboui<span style="color:var(--plum)">_</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-8 list-none">
+      @for (link of links; track link.label) {
+        <li>
+          <a
+            [routerLink]="link.path"
+            routerLinkActive="active"
+            class="nav-link">
+            {{ link.label }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <!-- Mobile toggle -->
+    <button
+      class="md:hidden cursor-pointer bg-transparent border-none"
+      (click)="toggleMenu()"
+      aria-label="Toggle menu">
+      <span style="font-family:'Space Mono',monospace; color:var(--muted); font-size:0.75rem">
+        {{ menuOpen() ? '[close]' : '[menu]' }}
+      </span>
+    </button>
+
+  </nav>
+
+  <!-- Mobile menu -->
+  @if (menuOpen()) {
+    <div
+      class="md:hidden px-6 py-4 flex flex-col gap-4"
+      style="border-top: 1px solid var(--border); background: var(--surface)">
+      @for (link of links; track link.label) {
+        <a 
+          [routerLink]="link.path"
+          routerLinkActive="active"
+          class="nav-link"
+          (click)="closeMenu()">
+          {{ link.label }}
+        </a>
+      }
+    </div>
+  }
+
+</header>

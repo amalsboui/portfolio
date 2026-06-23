@@ -1,1 +1,38 @@
-<p>hero works!</p>
+<section class="section min-h-[88vh] flex flex-col justify-center">
+
+  <p class="fade-up fade-up-1 mb-3 tracking-widest"
+     style="font-family:'Space Mono',monospace; color:var(--blue); font-size:0.84rem">
+    <span>$</span> whoami
+  </p>
+
+  <h1 class="fade-up fade-up-2 text-5xl md:text-7xl font-bold mb-4 leading-tight"
+      style="color:var(--text)">
+    Amal Sboui
+  </h1>
+
+  <h2 class="fade-up fade-up-3 text-lg md:text-2xl mb-6"
+      style="color:var(--muted); font-family:'Space Mono',monospace; font-weight:400">
+    {{ displayed() }}<span class="cursor"></span>
+  </h2>
+
+  <p class="fade-up fade-up-4 max-w-xl mb-10 leading-relaxed"
+     style="color:var(--muted); font-size:1rem">
+    I design, build, and automate cloud infrastructure,
+    pipelines, containers, and everything in between.
+  </p>
+
+  <div class="fade-up fade-up-4 flex gap-4 flex-wrap">
+    <a routerLink="/projects"
+       class="px-6 py-3 rounded text-sm font-bold transition-opacity hover:opacity-90"
+       style="background:var(--blue); color:#0e0e14;
+              font-family:'Space Mono',monospace;">
+      view projects
+    </a>
+    <a routerLink="/contact"
+       class="card px-6 py-3 rounded text-sm transition-colors"
+       style="color:var(--blue); font-family:'Space Mono',monospace;">
+      get in touch
+    </a>
+  </div>
+
+</section>
