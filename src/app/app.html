@@ -1,4 +1,9 @@
-<div class="page-wrapper">
+
+<div class="app-loading" *ngIf="!loaded">
+  <div class="loading-spinner"></div>
+</div>
+<div class="app-content" *ngIf="loaded">
+  <div class="page-wrapper">
   <div class="grid-overlay">
     @for (cell of gridCells; track cell.row + '-' + cell.col) {
       <div 
@@ -24,4 +29,5 @@
     </main>
     <app-footer />
   </div>
+</div>
 </div>
