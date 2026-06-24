@@ -1,11 +1,12 @@
 # Amal Sboui - Portfolio
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat&logo=vercel)](https://amalsboui.vercel.app)
-[![Built with Angular](https://img.shields.io/badge/Built%20with-Angular-DD0031?style=flat&logo=angular)](https://angular.dev)
+<div align="center">
+  <img src="./src/assets/images/icon-amal-left.png" alt="Amal Sboui" width="140" />
 
-Personal portfolio showcasing work in DevOps, Cloud Engineering, and ICT.
+  <p>Personal portfolio showcasing work in DevOps, Cloud Engineering, and ICT.</p>
 
-<img src="./src/assets/images/icon-amal-left.png" alt="Amal Sboui" width="160" />
+  [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat&logo=vercel)](https://amalsboui.vercel.app)  [![Built with Angular](https://img.shields.io/badge/Built%20with-Angular-DD0031?style=flat&logo=angular)](https://angular.dev)
+</div>
 
 ## Live Demo
 
