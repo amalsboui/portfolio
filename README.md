@@ -5,6 +5,8 @@
 
 Personal portfolio showcasing work in DevOps, Cloud Engineering, and ICT.
 
+<img src="./src/assets/images/icon-amal-left.png" alt="Amal Sboui" width="160" />
+
 ## Live Demo
 
 [amalsboui.vercel.app](https://amalsboui.vercel.app)
@@ -26,7 +28,7 @@ Personal portfolio website built with Angular 21. Showcases skills, projects, ce
 ## Tech Stack
 
 - Angular 21
-- Tailwind CSS
+- Tailwind CSS 4 (via `@tailwindcss/vite`)
 - Custom CSS
 - Iconify
 - Simple Icons
@@ -38,6 +40,8 @@ Personal portfolio website built with Angular 21. Showcases skills, projects, ce
 ```
 src/
 ├── app/
+│   ├── layouts/
+│   │   └── main-layout/
 │   ├── sections/
 │   │   ├── about/
 │   │   ├── certifications/
@@ -49,10 +53,15 @@ src/
 │   ├── shared/
 │   │   ├── footer/
 │   │   └── navbar/
-│   └── app.html
+│   ├── app.html
+│   ├── app.ts
+│   └── app.routes.ts
+├── assets/
+│   └── images/
+├── index.html
+├── main.ts
 └── styles.css
 ```
-
 
 ## Connect
 
