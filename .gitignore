@@ -42,8 +42,6 @@ __screenshots__/
 .DS_Store
 Thumbs.db
 
-# local pictures
-src/assets/images
 
 #Vscode
 ./vscode
