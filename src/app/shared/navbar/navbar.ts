@@ -1,30 +1,37 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Translation } from '../../services/translation';
+import { TranslationKey } from '../../services/translations';
+import { TranslatePipe } from '../../pipes/translate-pipe';
 
 interface NavLink {
   label: string;
   target: string;
+  key: TranslationKey;
 }
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, TranslatePipe],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
 
 export class Navbar {
  menuOpen = signal(false);
+
+  t = inject(Translation);
+
   toggleMenu() { this.menuOpen.update(v => !v); }
   closeMenu() { this.menuOpen.set(false); }
 
   links: NavLink[] = [
-    { label: 'About',      target: 'about' },
-    { label: 'Experience', target: 'experience' },
-    { label: 'Certifications', target: 'certifications' },
-    { label: 'Skills',     target: 'skills' },
-    { label: 'Projects',   target: 'projects' },
-    { label: 'Contact',    target: 'contact' },
+    { label: 'About', target: 'about', key: 'nav.about' },
+    { label: 'Experience', target: 'experience', key: 'nav.experience' },
+    { label: 'Certifications', target: 'certifications', key: 'nav.certifications' },
+    { label: 'Skills', target: 'skills', key: 'nav.skills' },
+    { label: 'Projects', target: 'projects', key: 'nav.projects' },
+    { label: 'Contact', target: 'contact', key: 'nav.contact' },
   ];
 
   scrollTo(sectionId: string) {
@@ -34,4 +41,10 @@ export class Navbar {
     }
     this.closeMenu(); 
   }
+
+toggleLanguage() {
+  console.log('Toggle clicked! Current language:', this.t.getCurrentLanguage());
+  this.t.toggleLanguage();
+  console.log('New language:', this.t.getCurrentLanguage());
+}
 }

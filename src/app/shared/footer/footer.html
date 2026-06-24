@@ -1,7 +1,7 @@
 <footer class="py-8 text-center" 
         style="border-top: 1px solid var(--border); position: relative; z-index: 2; background: var(--bg);">
   <p style="color:var(--muted); font-size:1rem">
-    Built by <span style="color:var(--blue)">Amal Sboui</span>
+    {{ 'footer.built' | translate }} <span style="color:var(--blue)">Amal Sboui</span>
     · Angular 21 + Tailwind v4
     <span style="color:var(--plum)">_</span>
   </p>
@@ -11,7 +11,7 @@
        style="color:var(--muted); text-decoration: none; font-size:0.9rem; transition: color 0.2s;"
        onmouseover="this.style.color='var(--plum)'"
        onmouseout="this.style.color='var(--muted)'">
-      [ Source Code ]
+      [ {{ 'footer.source' | translate }} ]
     </a>
   </div>
 </footer>

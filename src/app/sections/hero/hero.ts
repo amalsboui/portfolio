@@ -1,13 +1,16 @@
-import { Component, signal, type OnDestroy, type OnInit } from '@angular/core';
+import { Component, inject, signal, type OnDestroy, type OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Translation } from '../../services/translation';
+import { TranslatePipe } from '../../pipes/translate-pipe';
 
 @Component({
   selector: 'app-hero',
-  imports: [RouterLink],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })
 export class Hero implements OnInit, OnDestroy {
+  t = inject(Translation);
   displayed = signal('');
   private full = 'ICT Engineering Student.';
   private i = 0;

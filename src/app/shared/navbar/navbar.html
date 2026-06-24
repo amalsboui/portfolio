@@ -1,28 +1,37 @@
 <header
   class="sticky top-0 z-50 backdrop-blur-md border-b"
-  style="background: rgba(14,14,20,0.8); border-color: var(--border)">
+  style="background: rgba(14,14,20,0.8); border-color: var(--border); position: relative; z-index: 50;">
 
   <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
 
     <!-- Logo -->
     <a (click)="scrollTo('home')"
-       style="font-family:'Lexend', sans-serif; color:var(--rose); text-decoration:none"
+       style="font-family:'Lexend', sans-serif; color:var(--rose); text-decoration:none; cursor:pointer"
        class="text-lg font-bold tracking-wide">
       Amal Sboui<span style="color:var(--plum)">_</span>
     </a>
 
     <!-- Desktop links -->
-    <ul class="hidden md:flex items-center gap-8 list-none">
+    <ul class="hidden md:flex items-center gap-6 list-none">
       @for (link of links; track link.label) {
         <li>
           <a
             (click)="scrollTo(link.target)"
             class="nav-link"
-            style="cursor:pointer">
-            {{ link.label }}
+            style="cursor:pointer; font-size: 0.85rem; letter-spacing: 0.02em;">
+            {{ link.key | translate }}
           </a>
         </li>
       }
+      <li>
+        <button
+        (click)="toggleLanguage()"
+        style="cursor:pointer; font-size: 0.8rem; font-weight: 600; background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 4px 12px; color: var(--text); transition: all 0.2s;"
+        onmouseover="this.style.borderColor='var(--blue)'; this.style.color='var(--blue)'"
+        onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text)'">
+        {{ t.getCurrentLanguage() === 'en' ? 'EN' : 'FR' }}
+      </button>
+      </li>
     </ul>
 
     <!-- Mobile toggle -->
@@ -41,15 +50,22 @@
   @if (menuOpen()) {
     <div
       class="md:hidden px-6 py-4 flex flex-col gap-4"
-      style="border-top: 1px solid var(--border); background: var(--surface)">
+      style="border-top: 1px solid var(--border); background: var(--surface); position: relative; z-index: 51;">
       @for (link of links; track link.label) {
         <a 
           (click)="scrollTo(link.target)"
           class="nav-link"
-          style="cursor:pointer">
-          {{ link.label }}
+          style="cursor:pointer; font-size: 0.95rem;">
+          {{ link.key | translate }}
         </a>
       }
+      <button
+      (click)="toggleLanguage()"
+      style="cursor:pointer; font-size: 0.8rem; font-weight: 600; background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 4px 12px; color: var(--text); transition: all 0.2s;"
+      onmouseover="this.style.borderColor='var(--blue)'; this.style.color='var(--blue)'"
+      onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text)'">
+      {{ t.getCurrentLanguage() === 'en' ? 'EN' : 'FR' }}
+    </button>
     </div>
   }
 

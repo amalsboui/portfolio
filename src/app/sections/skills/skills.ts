@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Translation } from '../../services/translation';
+import { TranslatePipe } from '../../pipes/translate-pipe';
 
 interface Skill {
   name: string;
@@ -6,21 +8,23 @@ interface Skill {
 }
 
 interface SkillGroup {
-  category: string;
+  categoryKey: string;  
   accent: string;
   items: Skill[];
 }
 
 @Component({
   selector: 'app-skills',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './skills.html',
   styleUrl: './skills.css',
 })
 export class Skills {
+  t = inject(Translation);
+
    groups: SkillGroup[] = [
     {
-      category: 'Cloud Platforms',
+      categoryKey: 'skills.cloud', 
       accent: 'var(--blue)',
       items: [
         { name: 'AWS', icon: 'mdi:aws' },
@@ -28,7 +32,7 @@ export class Skills {
       ]
     },
     {
-      category: 'Infrastructure as Code',
+      categoryKey: 'skills.iac',  
       accent: 'var(--pink)',
       items: [
         { name: 'Terraform', icon: 'mdi:terraform' },
@@ -36,7 +40,7 @@ export class Skills {
       ]
     },
     {
-      category: 'Containers & Orchestration',
+      categoryKey: 'skills.containers',  
       accent: 'var(--plum)',
       items: [
         { name: 'Docker', icon: 'mdi:docker' },
@@ -44,7 +48,7 @@ export class Skills {
       ]
     },
     {
-      category: 'CI/CD',
+      categoryKey: 'skills.cicd',  
       accent: 'var(--blue)',
       items: [
         { name: 'GitHub Actions', icon: 'devicon-plain:githubactions' },
@@ -52,7 +56,7 @@ export class Skills {
       ]
     },
     {
-      category: 'Observability & Monitoring',
+      categoryKey: 'skills.observability',  
       accent: 'var(--pink)',
       items: [
         { name: 'Prometheus', icon: 'simple-icons:prometheus' },
@@ -61,7 +65,7 @@ export class Skills {
       ]
     },
     {
-      category: 'Networking & Security',
+      categoryKey: 'skills.networking', 
       accent: 'var(--plum)',
       items: [
         { name: 'Nginx', icon: 'simple-icons:nginx' },
@@ -72,7 +76,7 @@ export class Skills {
       ]
     },
     {
-      category: 'Databases',
+      categoryKey: 'skills.databases',  
       accent: 'var(--blue)',
       items: [
         { name: 'PostgreSQL', icon: 'lineicons:postgresql' },
@@ -81,7 +85,7 @@ export class Skills {
       ]
     },
     {
-      category: 'Operating Systems',
+      categoryKey: 'skills.os',  
       accent: 'var(--pink)',
       items: [
         { name: 'Linux', icon: 'mdi:linux' },
@@ -91,7 +95,7 @@ export class Skills {
       ]
     },
     {
-      category: 'Backend Frameworks',
+      categoryKey: 'skills.backend',  
       accent: 'var(--plum)',
       items: [
         { name: 'NestJS', icon: 'file-icons:nestjs' },
@@ -101,7 +105,7 @@ export class Skills {
       ]
     },
     {
-      category: 'Frontend',
+      categoryKey: 'skills.frontend',  
       accent: 'var(--blue)',
       items: [
         { name: 'Angular', icon: 'mdi:angular' },
@@ -109,7 +113,7 @@ export class Skills {
       ]
     },
     {
-      category: 'Programming Languages',
+      categoryKey: 'skills.languages',  
       accent: 'var(--pink)',
       items: [
         { name: 'Python', icon: 'akar-icons:python-fill' },
@@ -121,7 +125,7 @@ export class Skills {
       ]
     },
     {
-      category: 'Version Control & Collaboration',
+      categoryKey: 'skills.versioncontrol',  
       accent: 'var(--plum)',
       items: [
         { name: 'Git', icon: 'mdi:git' },
