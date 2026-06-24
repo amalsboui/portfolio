@@ -18,11 +18,11 @@
                 </a>
               }
             </div>
-            <p class="text-sm leading-relaxed mb-4" style="color: var(--muted)">{{ project.description }}</p>
+            <p class="text-lg leading-relaxed mb-4" style="color: var(--muted)">{{ project.description }}</p>
 
             <ul class="space-y-2 list-none">
               @for (point of project.highlights; track point) {
-                <li class="text-sm flex gap-2" style="color: var(--text)">
+                <li class="text-lg flex gap-2" style="color: var(--text)">
                   <span style="color: var(--pink)">•</span>
                   <span>{{ point }}</span>
                 </li>
@@ -62,11 +62,11 @@
                   </a>
                 }
               </div>
-              <p class="text-sm leading-relaxed mb-4" style="color: var(--muted)">{{ project.description }}</p>
+              <p class="text-lg leading-relaxed mb-4" style="color: var(--muted)">{{ project.description }}</p>
 
               <ul class="space-y-2 list-none">
                 @for (point of project.highlights; track point) {
-                  <li class="text-sm flex gap-2" style="color: var(--text)">
+                  <li class="text-lg flex gap-2" style="color: var(--text)">
                     <span style="color: var(--pink)">•</span>
                     <span>{{ point }}</span>
                   </li>
@@ -76,7 +76,10 @@
 
             <div class="flex flex-wrap gap-2">
               @for (tag of project.tags; track tag) {
-                <span class="badge badge-blue">{{ tag }}</span>
+                <span class="badge badge-blue" 
+                      style="font-size: 0.8rem; padding: 4px 14px;">
+                  {{ tag }}
+                </span>
               }
             </div>
           </div>

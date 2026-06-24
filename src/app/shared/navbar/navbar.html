@@ -5,7 +5,7 @@
   <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
 
     <!-- Logo -->
-    <a href="#home"
+    <a (click)="scrollTo('home')"
        style="font-family:'Lexend', sans-serif; color:var(--rose); text-decoration:none"
        class="text-xl font-bold tracking-wide">
       Amal Sboui<span style="color:var(--plum)">_</span>
@@ -16,8 +16,9 @@
       @for (link of links; track link.label) {
         <li>
           <a
-            [href]="link.href"
-            class="nav-link">
+            (click)="scrollTo(link.target)"
+            class="nav-link"
+            style="cursor:pointer">
             {{ link.label }}
           </a>
         </li>
@@ -43,9 +44,9 @@
       style="border-top: 1px solid var(--border); background: var(--surface)">
       @for (link of links; track link.label) {
         <a 
-          [href]="link.href"
+          (click)="scrollTo(link.target)"
           class="nav-link"
-          (click)="closeMenu()">
+          style="cursor:pointer">
           {{ link.label }}
         </a>
       }

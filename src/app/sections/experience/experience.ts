@@ -13,9 +13,9 @@ export class Experience {
     role: 'DevOps & Cloud Intern',
     org: 'Cloudnet Hosting (Felcloud), Tunisia',
     points: [
-      'Automated end-to-end deployment of Mailcow OSS on OpenStack VMs using modular Ansible roles',
-      'Exposed services via HAProxy on a bastion host, configured OpenStack security groups',
-      'Integrated Mailcow with Odoo ERP and Authentik SSO via OAuth2/OpenID Connect'
+      'Automated the end-to-end deployment of Mailcow OSS on OpenStack VMs using modular Ansible roles (Docker, Mailcow, HAProxy, dnsmasq), reducing the full setup to a single playbook run',
+      'Exposed services publicly via HAProxy on a bastion host, and configured OpenStack security groups for external access',
+      'Integrated Mailcow with Odoo ERP over SMTP/IMAP and with Authentik SSO using OAuth2 and OpenID Connect'
     ]
   },
   {
@@ -24,7 +24,7 @@ export class Experience {
     org: 'Centre National de l\'Informatique (CNI), Tunisia',
     points: [
       'Designed and deployed a prototype network infrastructure for a three-story organization',
-      'Configured routers, switches, VLANs, OSPF, static routing, and HSRP for high availability'
+      'Configured routers, switches, VLANs, OSPF, static routing, and HSRP to ensure high availability and secure, optimized data flow'
     ]
   }
 ];

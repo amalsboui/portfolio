@@ -26,5 +26,12 @@ export class Hero implements OnInit, OnDestroy {
   ngOnDestroy() {
     if (this.timer) clearInterval(this.timer);
   }
+  
+  scrollTo(sectionId: string) {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
 }
 

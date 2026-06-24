@@ -1,0 +1,31 @@
+<section class="section">
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="grid sm:grid-cols-2 gap-4">
+    @for (cert of certifications; track cert.name) {
+      <a [href]="cert.credentialUrl" target="_blank" rel="noopener noreferrer"
+         class="card p-5 flex items-start gap-4 transition-all hover:border-blue-400"
+         style="text-decoration: none; cursor: pointer;">
+
+        @if (cert.logo) {
+          <span class="iconify w-8 h-8 flex-shrink-0" 
+                [attr.data-icon]="cert.logo" 
+                data-width="32" 
+                data-height="32"></span>
+        }
+
+        <div class="flex-1 flex flex-col">
+          <p class="text-base font-bold" style="color: var(--text)">{{ cert.name }}</p>
+          <p class="text-sm" style="color: var(--muted)">{{ cert.issuer }}</p>
+          
+          <div class="mt-2 text-right">
+            <span class="text-sm font-medium" style="color: var(--pink);">
+              View credential →
+            </span>
+          </div>
+        </div>
+
+      </a>
+    }
+  </div>
+</section>

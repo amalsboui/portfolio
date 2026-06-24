@@ -3,7 +3,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 interface NavLink {
   label: string;
-  href: string;
+  target: string;
 }
 
 @Component({
@@ -19,10 +19,18 @@ export class Navbar {
   closeMenu() { this.menuOpen.set(false); }
 
   links: NavLink[] = [
-    { label: 'About',      href: '#about' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Skills',     href: '#skills' },
-    { label: 'Projects',   href: '#projects' },
-    { label: 'Contact',    href: '#contact' },
+    { label: 'About',      target: 'about' },
+    { label: 'Experience', target: 'experience' },
+    { label: 'Skills',     target: 'skills' },
+    { label: 'Projects',   target: 'projects' },
+    { label: 'Contact',    target: 'contact' },
   ];
+
+  scrollTo(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    this.closeMenu(); 
+  }
 }

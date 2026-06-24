@@ -23,106 +23,100 @@ export class Skills {
       category: 'Cloud Platforms',
       accent: 'var(--blue)',
       items: [
-        { name: 'AWS', icon: 'amazonaws' },
-        { name: 'Microsoft Azure', icon: 'microsoftazure' },
-        { name: 'Google Cloud', icon: 'googlecloud' },
-        { name: 'OpenStack', icon: 'openstack' },
-        { name: 'DigitalOcean', icon: 'digitalocean' },
+        { name: 'AWS', icon: 'mdi:aws' },
+        { name: 'Microsoft Azure', icon: 'mdi:microsoft-azure' },
       ]
     },
     {
       category: 'Infrastructure as Code',
       accent: 'var(--pink)',
       items: [
-        { name: 'Terraform', icon: 'terraform' },
-        { name: 'Ansible', icon: 'ansible' },
+        { name: 'Terraform', icon: 'mdi:terraform' },
+        { name: 'Ansible', icon: 'mdi:ansible' },
       ]
     },
     {
       category: 'Containers & Orchestration',
       accent: 'var(--plum)',
       items: [
-        { name: 'Docker', icon: 'docker' },
-        { name: 'Kubernetes', icon: 'kubernetes' },
+        { name: 'Docker', icon: 'mdi:docker' },
+        { name: 'Kubernetes', icon: 'mdi:kubernetes' },
       ]
     },
     {
       category: 'CI/CD',
       accent: 'var(--blue)',
       items: [
-        { name: 'GitHub Actions', icon: 'githubactions' },
-        { name: 'Jenkins', icon: 'jenkins' },
+        { name: 'GitHub Actions', icon: 'devicon-plain:githubactions' },
+        { name: 'Jenkins', icon: 'file-icons:jenkins' },
       ]
     },
     {
       category: 'Observability & Monitoring',
       accent: 'var(--pink)',
       items: [
-        { name: 'Prometheus', icon: 'prometheus' },
-        { name: 'Grafana', icon: 'grafana' },
-        { name: 'Loki', icon: 'grafana' },
+        { name: 'Prometheus', icon: 'simple-icons:prometheus' },
+        { name: 'Grafana', icon: 'simple-icons:grafana' },
+        { name: 'Loki'},
       ]
     },
     {
       category: 'Networking & Security',
       accent: 'var(--plum)',
       items: [
-        { name: 'Nginx', icon: 'nginx' },
-        { name: 'HAProxy', icon: 'haproxy' },
+        { name: 'Nginx', icon: 'simple-icons:nginx' },
+        { name: 'HAProxy', icon: 'devicon-plain:haproxy' },
         { name: 'VLANs' },
         { name: 'OSPF' },
         { name: 'HSRP' },
-        { name: 'Wireshark', icon: 'wireshark' },
       ]
     },
     {
       category: 'Databases',
       accent: 'var(--blue)',
       items: [
-        { name: 'PostgreSQL', icon: 'postgresql' },
-        { name: 'MySQL', icon: 'mysql' },
-        { name: 'SQL Server', icon: 'microsoftsqlserver' },
-        { name: 'SQLite', icon: 'sqlite' },
+        { name: 'PostgreSQL', icon: 'lineicons:postgresql' },
+        { name: 'MySQL', icon: 'lineicons:mysql' },
+        { name: 'SQL Server', icon: 'devicon-plain:microsoftsqlserver' },
       ]
     },
     {
       category: 'Operating Systems',
       accent: 'var(--pink)',
       items: [
-        { name: 'Linux', icon: 'linux' },
-        { name: 'Ubuntu', icon: 'ubuntu' },
-        { name: 'Debian', icon: 'debian' },
-        { name: 'Windows Server', icon: 'windows' },
+        { name: 'Linux', icon: 'mdi:linux' },
+        { name: 'Ubuntu', icon: 'mdi:ubuntu' },
+        { name: 'Debian', icon: 'mdi:debian' },
+        { name: 'Windows Server', icon: 'mdi:windows' },
       ]
     },
     {
       category: 'Backend Frameworks',
       accent: 'var(--plum)',
       items: [
-        { name: 'NestJS', icon: 'nestjs' },
-        { name: 'Flask', icon: 'flask' },
-        { name: 'FastAPI', icon: 'fastapi' },
-        { name: 'Node.js', icon: 'nodedotjs' },
-        { name: 'Spring Boot', icon: 'springboot' },
+        { name: 'NestJS', icon: 'file-icons:nestjs' },
+        { name: 'Flask', icon: 'mdi:flask' },
+        { name: 'FastAPI', icon: 'simple-icons:fastapi' },
+        { name: 'Node.js', icon: 'mdi:nodejs' },
       ]
     },
     {
       category: 'Frontend',
       accent: 'var(--blue)',
       items: [
-        { name: 'Angular', icon: 'angular' },
-        { name: 'React', icon: 'react' },
-        { name: 'TypeScript', icon: 'typescript' },      ]
+        { name: 'Angular', icon: 'mdi:angular' },
+        { name: 'React', icon: 'mdi:react' },
+      ]
     },
     {
       category: 'Programming Languages',
       accent: 'var(--pink)',
       items: [
-        { name: 'Python', icon: 'python' },
-        { name: 'Java', icon: 'openjdk' },
-        { name: 'C', icon: 'c' },
-        { name: 'C++', icon: 'cplusplus' },
-        { name: 'Bash', icon: 'gnubash' },
+        { name: 'Python', icon: 'akar-icons:python-fill' },
+        { name: 'Java', icon: 'ri:java-fill' },
+        { name: 'C' },
+        { name: 'C++' },
+        { name: 'Bash', icon: 'hugeicons:bash' },
         { name: 'SQL' },
       ]
     },
@@ -130,8 +124,8 @@ export class Skills {
       category: 'Version Control & Collaboration',
       accent: 'var(--plum)',
       items: [
-        { name: 'Git', icon: 'git' },
-        { name: 'GitHub', icon: 'github' },
+        { name: 'Git', icon: 'mdi:git' },
+        { name: 'GitHub', icon: 'mdi:github' },
       ]
     },
   ];

@@ -22,15 +22,21 @@
   </p>
 
   <div class="fade-up fade-up-4 flex gap-4 flex-wrap">
-    <a routerLink="/projects"
-       class="px-6 py-3 rounded text-sm font-bold transition-opacity hover:opacity-90"
-       style="background:var(--blue); color:#0e0e14;
-              font-family:'Space Mono',monospace;">
+    <a
+      (click)="scrollTo('projects')"
+      class="px-6 py-3 text-sm font-bold transition-all hover:opacity-90"
+      style="background:var(--blue); color:#0e0e14; cursor:pointer;
+            font-family:'Space Mono',monospace;
+            border-radius: 12px;">
       View projects
     </a>
-    <a routerLink="/contact"
-       class="card px-6 py-3 rounded text-sm transition-colors"
-       style="color:var(--blue); font-family:'Space Mono',monospace;">
+    <a
+      (click)="scrollTo('contact')"
+      class="px-6 py-3 text-sm transition-all"
+      style="color:var(--blue); font-family:'Space Mono',monospace; cursor:pointer;
+            background:var(--surface); 
+            border: 1px solid var(--border);
+            border-radius: 12px;">
       Get in touch
     </a>
   </div>

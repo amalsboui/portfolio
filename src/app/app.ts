@@ -8,10 +8,11 @@ import { Skills } from './sections/skills/skills';
 import { Navbar } from './shared/navbar/navbar';
 import { Footer } from './shared/footer/footer';
 import { Experience } from './sections/experience/experience';
+import { Certifications } from './sections/certifications/certifications';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Footer, Hero, About, Contact, Projects, Skills, Experience],
+  imports: [RouterOutlet, Navbar, Footer, Hero, About, Contact, Projects, Skills, Experience, Certifications],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
