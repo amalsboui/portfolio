@@ -5,7 +5,7 @@
 
   <p>Personal portfolio showcasing work in DevOps, Cloud Engineering, and ICT.</p>
 
-  [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat&logo=vercel)](https://amalsboui.vercel.app)[![Built with Angular](https://img.shields.io/badge/Built%20with-Angular-DD0031?style=flat&logo=angular)](https://angular.dev)
+  [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat&logo=vercel)](https://amalsboui.vercel.app)  [![Built with Angular](https://img.shields.io/badge/Built%20with-Angular-DD0031?style=flat&logo=angular)](https://angular.dev)
 </div>
 
 ## Live Demo
