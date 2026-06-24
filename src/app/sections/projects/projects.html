@@ -35,14 +35,16 @@
                class="rounded-md p-3 block"
                style="background: var(--bg); border: 1px solid var(--border)">
               <img [src]="project.diagram" [alt]="project.name + ' pipeline diagram'" class="w-full rounded" />
-              <p class="text-xs text-center mt-2" style="color: var(--muted)">click to view full size</p>
             </a>
           }
 
           <div class="flex flex-wrap gap-2">
             @for (tag of project.tags; track tag) {
-              <span class="badge badge-blue">{{ tag }}</span>
-            }
+                <span class="badge badge-blue" 
+                      style="font-size: 0.8rem; padding: 4px 14px;">
+                  {{ tag }}
+                </span>
+              }
           </div>
 
         </div>

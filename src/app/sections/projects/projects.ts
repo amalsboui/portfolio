@@ -64,6 +64,8 @@ projects: Project[] = [
       ],
       tags: ['React', 'Flask', 'Solidity', 'Docker', 'AKS', 'Terraform', 'GitHub Actions'],
       github: 'https://github.com/amalsboui/Voting-Dapp', 
+      diagram: 'assets/images/pipeline_votingdapp.svg',
+      diagramLayout: 'full'
     },
     {
       name: 'PetSit',
@@ -73,12 +75,14 @@ projects: Project[] = [
         'NestJS backend with JWT-based auth, bcrypt password hashing, and custom guards and decorators enforcing three roles: Admin, Owner, and Sitter',
         'Owners create pet-sitting requests, sitters browse and accept or refuse them, with role-filtered result sets so each user only sees what is relevant to them',
         'Real-time notifications over WebSockets: sitters are notified instantly when a new request appears, owners are notified the moment theirs is accepted or refused',
-        'Angular frontend built entirely with standalone components',
+        'Angular 21 frontend built entirely with standalone components',
         'A built-in AI assistant powered by GPT-4o gives short pet-care tips and always defers to a vet for health concerns rather than attempting to diagnose',
         'DTO validation via class-validator on every endpoint, with the GitHub API key kept server-side only'
       ],
       tags: ['NestJS', 'Angular', 'PostgreSQL', 'WebSockets', 'JWT'],
       github: 'https://github.com/amalsboui/PetSit',
+      diagram: 'assets/images/pipeline_petsit.png',
+      diagramLayout: 'side'
     },
     {
       name: 'Sentiment Analysis MLOps Platform',

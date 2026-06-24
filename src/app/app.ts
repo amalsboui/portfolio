@@ -38,6 +38,17 @@ export class App {
         this.gridCells.push({ row, col });
       }
     }
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+
+      this.gridCells = [];
+      for (let row = 0; row < this.gridRows; row++) {
+        for (let col = 0; col < this.gridCols; col++) {
+          this.gridCells.push({ row, col });
+        }
+      }
   }
 
   @HostListener('document:mousemove', ['$event'])

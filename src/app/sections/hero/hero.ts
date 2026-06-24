@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
 })
 export class Hero implements OnInit, OnDestroy {
   displayed = signal('');
-  private full = '4th Year ICT Engineering Student.';
+  private full = 'ICT Engineering Student.';
   private i = 0;
   private timer: ReturnType<typeof setInterval> | null = null;
 
@@ -26,7 +26,7 @@ export class Hero implements OnInit, OnDestroy {
   ngOnDestroy() {
     if (this.timer) clearInterval(this.timer);
   }
-  
+
   scrollTo(sectionId: string) {
   const element = document.getElementById(sectionId);
   if (element) {
