@@ -5,18 +5,18 @@
     <span>$</span> whoami
   </p>
 
-  <h1 class="fade-up fade-up-2 text-5xl md:text-7xl font-bold mb-4 leading-tight"
+  <h1 class="fade-up fade-up-2 text-lg md:text-7xl font-bold mb-4 leading-tight"
       style="color:var(--text)">
     Amal Sboui
   </h1>
 
-  <h2 class="fade-up fade-up-3 text-lg md:text-2xl mb-6"
+  <h2 class="fade-up fade-up-3 text-base md:text-2xl mb-6"
       style="color:var(--muted); font-family:'Space Mono',monospace; font-weight:400">
     {{ displayed() }}<span class="cursor"></span>
   </h2>
 
-  <p class="fade-up fade-up-4 max-w-xl mb-10 leading-relaxed"
-     style="color:var(--muted); font-size:1.125rem">
+  <p class="fade-up fade-up-4 max-w-lg mb-10 leading-relaxed"
+     style="color:var(--muted); font-size:1.1rem">
     I design, build, and automate cloud infrastructure,
     pipelines, containers, and everything in between.
   </p>
@@ -24,7 +24,7 @@
   <div class="fade-up fade-up-4 flex gap-4 flex-wrap">
     <a
       (click)="scrollTo('projects')"
-      class="px-6 py-3 text-sm font-bold transition-all hover:opacity-90"
+      class="px-6 py-3 text-xs font-bold transition-all hover:opacity-90"
       style="background:var(--blue); color:#0e0e14; cursor:pointer;
             font-family:'Space Mono',monospace;
             border-radius: 12px;">
@@ -32,7 +32,7 @@
     </a>
     <a
       (click)="scrollTo('contact')"
-      class="px-6 py-3 text-sm transition-all"
+      class="px-6 py-3 text-xs transition-all"
       style="color:var(--blue); font-family:'Space Mono',monospace; cursor:pointer;
             background:var(--surface); 
             border: 1px solid var(--border);
@@ -55,13 +55,13 @@
  <div class="overflow-hidden py-4 border-y marquee-container mt-27" style="border-color: var(--border)">
     <div class="flex gap-8 whitespace-nowrap animate-marquee">
       @for (word of ['AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Cloud Native', 'SRE']; track word) {
-        <span class="text-sm font-medium" style="color: var(--muted)">{{ word }} ✦</span>
+        <span class="text-xs font-medium" style="color: var(--muted)">{{ word }} ✦</span>
       }
       @for (word of ['AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Cloud Native', 'SRE']; track word) {
-        <span class="text-sm font-medium" style="color: var(--muted)">{{ word }} ✦</span>
+        <span class="text-xs font-medium" style="color: var(--muted)">{{ word }} ✦</span>
       }
       @for (word of ['AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Cloud Native', 'SRE']; track word) {
-        <span class="text-sm font-medium" style="color: var(--muted)">{{ word }} ✦</span>
+        <span class="text-xs font-medium" style="color: var(--muted)">{{ word }} ✦</span>
       }
     </div>
   </div>

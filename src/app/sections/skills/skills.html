@@ -4,7 +4,7 @@
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
     @for (group of groups; track group.category) {
       <div class="card p-5">
-        <p class="text-base mb-4 font-bold" style="color: var(--text)">
+        <p class="text-sm mb-4 font-bold" style="color: var(--text)">
           {{ group.category }}
         </p>
         <div class="flex flex-wrap gap-2">
@@ -17,7 +17,7 @@
                       data-width="16" 
                       data-height="16"></span>
               }
-              <span class="text-sm font-medium" style="color: var(--muted)">{{ skill.name }}</span>
+              <span class="text-xs font-medium" style="color: var(--muted)">{{ skill.name }}</span>
             </div>
           }
         </div>
