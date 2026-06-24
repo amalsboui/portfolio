@@ -134,7 +134,7 @@ export const translations: Record<TranslationKey, Record<Language, string>> = {
   // Hero
   'hero.whoami': { en: 'whoami', fr: 'qui suis-je' },
   'hero.title': { en: 'Amal Sboui', fr: 'Amal Sboui' },
-  'hero.subtitle': { en: 'ICT Engineering Student', fr: 'Étudiante en Ingénierie ICT' },
+  'hero.subtitle': { en: 'ICT Engineering Student', fr: 'Étudiante ingénieure en Réseaux et Télécommunications' },
   'hero.description': {
     en: 'I design, build, and automate cloud infrastructure, pipelines, containers, and everything in between.',
     fr: 'Je conçois, construis et automatise l\'infrastructure cloud, les pipelines, les conteneurs et tout ce qui se trouve entre les deux.'
@@ -382,6 +382,6 @@ export const translations: Record<TranslationKey, Record<Language, string>> = {
     fr: 'Documentation de l\'architecture réseau et remise d\'un rapport technique couvrant les choix de conception, les étapes de configuration et les tests de validation'
   },
   // Footer
-  'footer.built': { en: 'Built by', fr: 'Construit par' },
+  'footer.built': { en: 'Built by', fr: 'Conçu par' },
   'footer.source': { en: 'Source Code', fr: 'Code Source' },
 };

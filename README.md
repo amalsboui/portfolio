@@ -24,6 +24,7 @@ Personal portfolio website built with Angular 21. Showcases skills, projects, ce
 - Smooth animations and scrolling
 - Skills and certifications with Iconify icons
 - Project showcase with GitHub links
+- French/English language toggle
 - Contact section
 
 ## Tech Stack
