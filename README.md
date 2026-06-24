@@ -1,59 +1,61 @@
-# Portfolio
+# Amal Sboui - Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat&logo=vercel)](https://amalsboui.vercel.app)
+[![Built with Angular](https://img.shields.io/badge/Built%20with-Angular-DD0031?style=flat&logo=angular)](https://angular.dev)
 
-## Development server
+Personal portfolio showcasing work in DevOps, Cloud Engineering, and ICT.
 
-To start a local development server, run:
+## Live Demo
 
-```bash
-ng serve
+[amalsboui.vercel.app](https://amalsboui.vercel.app)
+
+## Overview
+
+Personal portfolio website built with Angular 21. Showcases skills, projects, certifications, and experience as an ICT Engineering student specializing in Networks and Telecommunications, with a focus on DevOps and Cloud Infrastructure.
+
+## Features
+
+- Interactive grid background with cursor-following glow effect
+- Fully responsive across all devices
+- Dark theme with custom color accents
+- Smooth animations and scrolling
+- Skills and certifications with Iconify icons
+- Project showcase with GitHub links
+- Contact section
+
+## Tech Stack
+
+- Angular 21
+- Tailwind CSS
+- Custom CSS
+- Iconify
+- Simple Icons
+- Vercel
+- TypeScript
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── sections/
+│   │   ├── about/
+│   │   ├── certifications/
+│   │   ├── contact/
+│   │   ├── experience/
+│   │   ├── hero/
+│   │   ├── projects/
+│   │   └── skills/
+│   ├── shared/
+│   │   ├── footer/
+│   │   └── navbar/
+│   └── app.html
+└── styles.css
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## Connect
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- LinkedIn: [amal-sboui](https://linkedin.com/in/amal-sboui)
+- GitHub: [amalsboui](https://github.com/amalsboui)
+- Email: amal.sboui@insat.ucar.tn
