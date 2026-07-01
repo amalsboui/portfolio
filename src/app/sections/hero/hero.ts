@@ -1,7 +1,7 @@
 import { Component, inject, signal, type OnDestroy, type OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Translation } from '../../services/translation';
 import { TranslatePipe } from '../../pipes/translate-pipe';
+import { Translation } from '../../services/translation/translation';
 
 @Component({
   selector: 'app-hero',

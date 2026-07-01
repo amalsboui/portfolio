@@ -76,14 +76,7 @@
               </ul>
             </div>
 
-            <div class="flex flex-wrap gap-2">
-              @for (tag of project.tags; track tag) {
-                <span class="badge badge-blue" 
-                      style="font-size: 0.8rem; padding: 4px 14px;">
-                  {{ tag }}
-                </span>
-              }
-            </div>
+          
           </div>
 
           <div class="rounded-md p-3 flex items-center justify-center"
@@ -93,6 +86,14 @@
             } @else {
               <span class="text-xs text-center" style="color: var(--muted)">{{ 'projects.diagram' | translate }}</span>
             }
+          </div>
+          <div class="flex flex-wrap gap-2">
+            @for (tag of project.tags; track tag) {
+                <span class="badge badge-blue" 
+                      style="font-size: 0.8rem; padding: 4px 14px;">
+                  {{ tag }}
+                </span>
+              }
           </div>
 
         </div>

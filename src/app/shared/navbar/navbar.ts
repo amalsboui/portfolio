@@ -1,8 +1,8 @@
 import { Component, inject, signal } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { Translation } from '../../services/translation';
-import { TranslationKey } from '../../services/translations';
+import { TranslationKey } from '../../services/translation/translations';
 import { TranslatePipe } from '../../pipes/translate-pipe';
+import { Translation } from '../../services/translation/translation';
+import { ThemeService } from '../../services/theme/theme';
 
 interface NavLink {
   label: string;
@@ -12,13 +12,14 @@ interface NavLink {
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive, TranslatePipe],
+  imports: [TranslatePipe],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
 
 export class Navbar {
- menuOpen = signal(false);
+  menuOpen = signal(false);
+  theme = inject(ThemeService);
 
   t = inject(Translation);
 
@@ -43,8 +44,10 @@ export class Navbar {
   }
 
 toggleLanguage() {
-  console.log('Toggle clicked! Current language:', this.t.getCurrentLanguage());
   this.t.toggleLanguage();
-  console.log('New language:', this.t.getCurrentLanguage());
 }
+
+toggleTheme() {
+    this.theme.toggleTheme();
+  }
 }

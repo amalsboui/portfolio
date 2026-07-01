@@ -30,6 +30,11 @@ export class App {
   
   fadeTimeout: any;
   isActive = true;
+  loaded = false; 
+
+  isMobile(): boolean {
+    return window.innerWidth < 768;
+  }
 
   constructor() {
     this.gridCells = [];
@@ -51,8 +56,21 @@ export class App {
       }
   }
 
+  ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.loaded = true;
+    }, 100);
+  }
+
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
+    if (this.isMobile()) {
+      return;
+    }
+
     this.isActive = true;
     clearTimeout(this.fadeTimeout);
     
@@ -113,6 +131,16 @@ export class App {
   }
 
   getCellStyle(row: number, col: number) {
+    if (this.isMobile()) {
+      return {
+        opacity: 0,
+        background: 'transparent',
+        borderColor: 'rgba(124, 147, 212, 0.02)',
+        transform: 'scale(1)',
+        transition: 'all 0.15s ease-out'
+      };
+    }
+
     const cellX = col * this.cellSize + this.cellSize / 2;
     const cellY = row * this.cellSize + this.cellSize / 2;
     

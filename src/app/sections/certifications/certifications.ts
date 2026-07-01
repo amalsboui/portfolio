@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { Translation } from '../../services/translation';
 import { TranslatePipe } from '../../pipes/translate-pipe';
+import { Translation } from '../../services/translation/translation';
 
 interface Certification {
   nameKey: string;

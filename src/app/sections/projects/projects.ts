@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { TranslatePipe } from '../../pipes/translate-pipe';
-import { Translation } from '../../services/translation';
+import { Translation } from '../../services/translation/translation';
 
 export interface Project {
   nameKey: string;

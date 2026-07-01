@@ -1,14 +1,14 @@
 <header
-  class="sticky top-0 z-50 backdrop-blur-md border-b"
-  style="background: rgba(14,14,20,0.8); border-color: var(--border); position: relative; z-index: 50;">
+  class="sticky top-0 z-50 border-b"
+  style="background: var(--navbar-bg); border-color: var(--border); position: relative; z-index: 50; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
 
-  <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+  <nav class="max-w-5xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
 
-    <!-- Logo -->
+    <!-- Logo - dark mode keeps original, light mode has dark purple -->
     <a (click)="scrollTo('home')"
-       style="font-family:'Lexend', sans-serif; color:var(--rose); text-decoration:none; cursor:pointer"
-       class="text-lg font-bold tracking-wide">
-      Amal Sboui<span style="color:var(--plum)">_</span>
+       style="font-family:'Lexend', sans-serif; text-decoration:none; cursor:pointer; transition: color 0.3s ease;"
+       class="text-base md:text-lg font-bold tracking-wide">
+      <span style="color: var(--logo-color);">Amal Sboui</span><span style="color: var(--pink);">_</span>
     </a>
 
     <!-- Desktop links -->
@@ -23,24 +23,35 @@
           </a>
         </li>
       }
+      <!-- Language toggle -->
       <li>
         <button
-        (click)="toggleLanguage()"
-        style="cursor:pointer; font-size: 0.8rem; font-weight: 600; background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 4px 12px; color: var(--text); transition: all 0.2s;"
-        onmouseover="this.style.borderColor='var(--blue)'; this.style.color='var(--blue)'"
-        onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text)'">
-        {{ t.getCurrentLanguage() === 'en' ? 'EN' : 'FR' }}
-      </button>
+          (click)="toggleLanguage()"
+          style="cursor:pointer; font-size: 0.75rem; font-weight: 500; background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 4px 12px; color: var(--text); transition: all 0.2s; letter-spacing: 0.02em;"
+          onmouseover="this.style.borderColor='var(--blue)'; this.style.color='var(--blue)'"
+          onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text)'">
+          {{ t.getCurrentLanguage() === 'en' ? 'FR' : 'EN' }}
+        </button>
+      </li>
+      <!-- Theme toggle -->
+      <li>
+        <button
+          (click)="toggleTheme()"
+          style="cursor:pointer; font-size: 0.75rem; font-weight: 500; background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 4px 10px; color: var(--text); transition: all 0.2s;"
+          onmouseover="this.style.borderColor='var(--blue)'; this.style.color='var(--blue)'"
+          onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text)'">
+          <i class="fas fa-{{ theme.isDark() ? 'sun' : 'moon' }}" style="font-size: 0.85rem;"></i>
+        </button>
       </li>
     </ul>
 
-    <!-- Mobile toggle -->
+    <!-- Mobile toggle - larger icons -->
     <button
-      class="md:hidden cursor-pointer bg-transparent border-none"
+      class="md:hidden cursor-pointer bg-transparent border-none flex items-center gap-2 p-2"
       (click)="toggleMenu()"
       aria-label="Toggle menu">
-      <span style="font-family:'Space Mono',monospace; color:var(--muted); font-size:0.75rem">
-        {{ menuOpen() ? 'Close' : 'Menu' }}
+      <span style="font-family:'Space Mono',monospace; color:var(--text); font-size:1.2rem; font-weight: 500;">
+        {{ menuOpen() ? '✕' : '☰' }}
       </span>
     </button>
 
@@ -49,23 +60,32 @@
   <!-- Mobile menu -->
   @if (menuOpen()) {
     <div
-      class="md:hidden px-6 py-4 flex flex-col gap-4"
+      class="md:hidden px-4 py-4 flex flex-col gap-3"
       style="border-top: 1px solid var(--border); background: var(--surface); position: relative; z-index: 51;">
       @for (link of links; track link.label) {
         <a 
           (click)="scrollTo(link.target)"
           class="nav-link"
-          style="cursor:pointer; font-size: 0.95rem;">
+          style="cursor:pointer; font-size: 0.95rem; padding: 6px 0; color: var(--text);">
           {{ link.key | translate }}
         </a>
       }
-      <button
-      (click)="toggleLanguage()"
-      style="cursor:pointer; font-size: 0.8rem; font-weight: 600; background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 4px 12px; color: var(--text); transition: all 0.2s;"
-      onmouseover="this.style.borderColor='var(--blue)'; this.style.color='var(--blue)'"
-      onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text)'">
-      {{ t.getCurrentLanguage() === 'en' ? 'EN' : 'FR' }}
-    </button>
+      <div class="flex items-center gap-3 pt-2" style="border-top: 1px solid var(--border);">
+        <button
+          (click)="toggleLanguage()"
+          style="cursor:pointer; font-size: 0.8rem; font-weight: 500; background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 6px 16px; color: var(--text); transition: all 0.2s; flex: 1; text-align: center;"
+          onmouseover="this.style.borderColor='var(--blue)'; this.style.color='var(--blue)'"
+          onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text)'">
+          {{ t.getCurrentLanguage() === 'en' ? 'FR' : 'EN' }}
+        </button>
+        <button
+          (click)="toggleTheme()"
+          style="cursor:pointer; font-size: 0.85rem; font-weight: 500; background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 6px 16px; color: var(--text); transition: all 0.2s; flex: 1; text-align: center;"
+          onmouseover="this.style.borderColor='var(--blue)'; this.style.color='var(--blue)'"
+          onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text)'">
+          <i class="fas fa-{{ theme.isDark() ? 'sun' : 'moon' }}" style="font-size: 0.9rem;"></i>
+        </button>
+      </div>
     </div>
   }
 
