@@ -1,4 +1,4 @@
-import { Component, signal, HostListener, Renderer2, OnInit } from '@angular/core';
+import { Component, signal, HostListener, Renderer2, OnInit, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Hero } from './sections/hero/hero';
 import { About } from './sections/about/about';
@@ -18,7 +18,7 @@ import { Education } from './sections/education/education';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App  implements OnInit{
+export class App  implements OnInit, AfterViewInit {
   gridRows = 30;
   gridCols = 40;
   gridCells: { row: number; col: number }[] = [];
@@ -57,19 +57,19 @@ export class App  implements OnInit{
         }
       }
   }
-
-  ngOnInit() {
+  ngAfterViewInit() {
     const loader = document.getElementById('initial-loader');
     if (loader) {
       loader.classList.add('fade-out');
       setTimeout(() => loader.remove(), 400);
     }
-  }
 
-  ngAfterViewInit() {
     setTimeout(() => {
       this.loaded = true;
     }, 100);
+  }
+  ngOnInit() {
+  
   }
 
   @HostListener('document:mousemove', ['$event'])

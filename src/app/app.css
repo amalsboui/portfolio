@@ -91,14 +91,8 @@ main, app-footer {
 
 :host {
   display: block;
-  animation: fadeIn 0.3s ease forwards;
-  opacity: 0;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
 /* Hide grid on mobile */
 @media (max-width: 768px) {
   .grid-overlay {
