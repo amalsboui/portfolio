@@ -58,11 +58,9 @@ export class App  implements OnInit, AfterViewInit {
       }
   }
   ngAfterViewInit() {
-    const loader = document.getElementById('initial-loader');
-    if (loader) {
-      loader.classList.add('fade-out');
-      setTimeout(() => loader.remove(), 400);
-    }
+    if ((window as any).__loaderDismiss) {
+    (window as any).__loaderDismiss();
+  }
 
     setTimeout(() => {
       this.loaded = true;
