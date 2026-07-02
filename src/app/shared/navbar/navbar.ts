@@ -38,13 +38,27 @@ export class Navbar {
   ];
 
   scrollTo(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    this.closeMenu(); 
+  const element = document.getElementById(sectionId);
+  if (element) {
+    // Close menu first
+    this.closeMenu();
+    
+    // Small delay to let menu close before scrolling
+    setTimeout(() => {
+      // Get navbar height (only needed on desktop where it's sticky)
+      const navbar = document.querySelector('app-navbar header');
+      const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 0;
+      
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }, 100);
   }
-
+}
 toggleLanguage() {
   this.t.toggleLanguage();
 }
