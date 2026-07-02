@@ -99,7 +99,6 @@ export class Skills {
       accent: 'var(--plum)',
       items: [
         { name: 'NestJS', icon: 'file-icons:nestjs' },
-        { name: 'Flask', icon: 'mdi:flask' },
         { name: 'FastAPI', icon: 'simple-icons:fastapi' },
         { name: 'Node.js', icon: 'mdi:nodejs' },
       ]

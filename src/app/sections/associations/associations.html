@@ -1,0 +1,29 @@
+<section class="section">
+  <h2 class="section-title">{{ 'associations.title' | translate }}</h2>
+
+  <div class="flex flex-col gap-6">
+    @for (assoc of associations; track assoc.nameKey) {
+      <div class="card p-6">
+        <div class="flex flex-wrap items-start justify-between mb-3 gap-2">
+          <h3 class="text-lg font-bold" style="color: var(--blue)">{{ assoc.nameKey | translate }}</h3>
+          <span class="text-sm font-medium px-3 py-1 rounded-full" 
+                style="background: var(--badge-bg); color: var(--pink); border: 1px solid var(--badge-border);">
+            {{ assoc.roleKey | translate }}
+          </span>
+        </div>
+        
+        <p class="text-sm font-medium mb-2" style="color: var(--muted)">{{ assoc.periodKey | translate }}</p>
+        <p class="text-base leading-relaxed mb-4" style="color: var(--muted)">{{ assoc.descriptionKey | translate }}</p>
+        
+        <ul class="space-y-2 list-none">
+          @for (point of assoc.highlights; track point) {
+            <li class="text-sm flex gap-2" style="color: var(--text)">
+              <span style="color: var(--pink)">•</span>
+              <span>{{ point | translate }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    }
+  </div>
+</section>

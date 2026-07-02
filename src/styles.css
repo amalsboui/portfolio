@@ -18,7 +18,8 @@
   --grid-color: rgba(124, 147, 212, 0.06);
   --navbar-bg: #14151f;    
   --footer-bg: #14151f;
-  --logo-color: #d88fb0;    
+  --logo-color: #d88fb0;
+  --logo-hyphen: #7c93d4;    
   --card-shadow: 0 8px 30px rgba(124, 147, 212, 0.08);
   --badge-bg: rgba(124, 147, 212, 0.08);
   --badge-border: rgba(124, 147, 212, 0.15);
@@ -39,7 +40,8 @@
   --grid-color: rgba(107, 140, 174, 0.06);
   --navbar-bg: #e8e0d8;   /* Warm light for navbar */
   --footer-bg: #e8e0d8;   /* Same as navbar */
-  --logo-color: #4a2a3a;
+  --logo-color: #840a47;
+  --logo-hyphen: #d88fb0;
   --card-shadow: 0 8px 30px rgba(107, 140, 174, 0.08);
   --badge-bg: rgba(107, 140, 174, 0.12);
   --badge-border: rgba(107, 140, 174, 0.20);

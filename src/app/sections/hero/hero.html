@@ -1,7 +1,7 @@
 <section class="section min-h-[88vh] flex flex-col justify-center">
 
   <p class="fade-up fade-up-1 mb-3 tracking-widest"
-     style="font-family:'Space Mono',monospace; color:var(--blue); font-size:0.84rem">
+     style="color:var(--blue); font-size:0.84rem">
     <span>$</span>whoami
   </p>
 
@@ -25,14 +25,13 @@
       (click)="scrollTo('projects')"
       class="px-6 py-3 text-xs font-bold transition-all hover:opacity-90"
       style="background:var(--blue); color:#0e0e14; cursor:pointer;
-            font-family:'Space Mono',monospace;
             border-radius: 12px;">
       {{ 'hero.projects' | translate }}
     </a>
     <a
       (click)="scrollTo('contact')"
-      class="px-6 py-3 text-xs transition-all"
-      style="color:var(--blue); font-family:'Space Mono',monospace; cursor:pointer;
+      class="px-6 py-3 text-xs transition-all hover:opacity-90"
+      style="color:var(--blue); cursor:pointer;
             background:var(--surface); 
             border: 1px solid var(--border);
             border-radius: 12px;">

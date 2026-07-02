@@ -1,4 +1,4 @@
-import { Component, signal, HostListener } from '@angular/core';
+import { Component, signal, HostListener, Renderer2, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Hero } from './sections/hero/hero';
 import { About } from './sections/about/about';
@@ -9,14 +9,16 @@ import { Navbar } from './shared/navbar/navbar';
 import { Footer } from './shared/footer/footer';
 import { Experience } from './sections/experience/experience';
 import { Certifications } from './sections/certifications/certifications';
+import { Associations } from './sections/associations/associations';
+import { Education } from './sections/education/education';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Footer, Hero, About, Contact, Projects, Skills, Experience, Certifications],
+  imports: [RouterOutlet, Navbar, Footer, Hero, About, Contact, Projects, Skills, Experience, Certifications, Education, Associations],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App  implements OnInit{
   gridRows = 30;
   gridCols = 40;
   gridCells: { row: number; col: number }[] = [];
@@ -36,7 +38,7 @@ export class App {
     return window.innerWidth < 768;
   }
 
-  constructor() {
+  constructor(private renderer: Renderer2) {
     this.gridCells = [];
     for (let row = 0; row < this.gridRows; row++) {
       for (let col = 0; col < this.gridCols; col++) {
@@ -57,6 +59,11 @@ export class App {
   }
 
   ngOnInit() {
+    const loader = document.getElementById('initial-loader');
+    if (loader) {
+      loader.classList.add('fade-out');
+      setTimeout(() => loader.remove(), 400);
+    }
   }
 
   ngAfterViewInit() {

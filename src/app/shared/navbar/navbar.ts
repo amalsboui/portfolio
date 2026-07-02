@@ -29,9 +29,11 @@ export class Navbar {
   links: NavLink[] = [
     { label: 'About', target: 'about', key: 'nav.about' },
     { label: 'Experience', target: 'experience', key: 'nav.experience' },
+    { label: 'Education', target: 'education', key: 'nav.education' },
     { label: 'Certifications', target: 'certifications', key: 'nav.certifications' },
     { label: 'Skills', target: 'skills', key: 'nav.skills' },
     { label: 'Projects', target: 'projects', key: 'nav.projects' },
+    { label: 'Associations', target: 'associations', key: 'nav.associations' },
     { label: 'Contact', target: 'contact', key: 'nav.contact' },
   ];
 

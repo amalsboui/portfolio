@@ -4,15 +4,15 @@
 
   <nav class="max-w-5xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
 
-    <!-- Logo - dark mode keeps original, light mode has dark purple -->
+    <!-- Logo  -->
     <a (click)="scrollTo('home')"
        style="font-family:'Lexend', sans-serif; text-decoration:none; cursor:pointer; transition: color 0.3s ease;"
        class="text-base md:text-lg font-bold tracking-wide">
-      <span style="color: var(--logo-color);">Amal Sboui</span><span style="color: var(--pink);">_</span>
+      <span style="color: var(--logo-color);">Amal Sboui</span><span style="color: var(--logo-hyphen);">_</span>
     </a>
 
     <!-- Desktop links -->
-    <ul class="hidden md:flex items-center gap-6 list-none">
+    <ul class="hidden md:flex items-center gap-4 list-none">
       @for (link of links; track link.label) {
         <li>
           <a

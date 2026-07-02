@@ -4,9 +4,11 @@ export type TranslationKey =
   // Navbar
   | 'nav.about'
   | 'nav.experience'
+  | 'nav.education'
   | 'nav.certifications'
   | 'nav.skills'
   | 'nav.projects'
+  | 'nav.associations'
   | 'nav.contact'
   | 'nav.source'
   // Hero
@@ -32,6 +34,14 @@ export type TranslationKey =
   // Contact
   | 'contact.title'
   | 'contact.description'
+  | 'education.title'
+  //education
+  | 'education.period1'
+  | 'education.school1'
+  | 'education.program1'
+  | 'education.period2'
+  | 'education.school2'
+  | 'education.program2'
   // Certifications
 | 'certifications.title'
 | 'certifications.view'
@@ -117,18 +127,44 @@ export type TranslationKey =
   | 'experience.point2_1'
   | 'experience.point2_2'
   | 'experience.point2_3'
+    // Associations
+  | 'associations.title'
+  | 'associations.jeinsat.name'
+  | 'associations.jeinsat.role'
+  | 'associations.jeinsat.period'
+  | 'associations.jeinsat.description'
+  | 'associations.jeinsat.highlight1'
+  | 'associations.jeinsat.highlight2'
+  | 'associations.jeinsat.highlight3'
+  | 'associations.jeinsat.highlight4'
+  | 'associations.jeinsat.highlight5'
+  | 'associations.acm.name'
+  | 'associations.acm.role'
+  | 'associations.acm.period'
+  | 'associations.acm.description'
+  | 'associations.acm.highlight1'
+  | 'associations.acm.highlight2'
+  | 'associations.securinets.name'
+  | 'associations.securinets.role'
+  | 'associations.securinets.period'
+  | 'associations.securinets.description'
+  | 'associations.securinets.highlight1'
+  | 'associations.securinets.highlight2'
+  | 'associations.securinets.highlight3'
   // Footer
   | 'footer.built'
   | 'footer.source';
 
 export const translations: Record<TranslationKey, Record<Language, string>> = {
   // Navbar
-  'nav.about': { en: 'About', fr: 'À propos' },
-  'nav.experience': { en: 'Experience', fr: 'Expérience' },
-  'nav.certifications': { en: 'Certifications', fr: 'Certifications' },
-  'nav.skills': { en: 'Skills', fr: 'Compétences' },
-  'nav.projects': { en: 'Projects', fr: 'Projets' },
-  'nav.contact': { en: 'Contact', fr: 'Contact' },
+  'nav.about':          { en: 'About',    fr: 'À propos' },
+  'nav.experience':     { en: 'Exp.',     fr: 'Expérience' },
+  'nav.education':      { en: 'Education', fr: 'Formation' },
+  'nav.certifications': { en: 'Certs',    fr: 'Certifs' },
+  'nav.skills':         { en: 'Skills',   fr: 'Compétences' },
+  'nav.projects':       { en: 'Projects', fr: 'Projets' },
+  'nav.associations':   { en: 'Clubs',    fr: 'Clubs' },
+  'nav.contact':        { en: 'Contact',  fr: 'Contact' },
   'nav.source': { en: 'Source', fr: 'Source' },
 
   // Hero
@@ -355,16 +391,16 @@ export const translations: Record<TranslationKey, Record<Language, string>> = {
   'experience.role1': { en: 'DevOps & Cloud Intern', fr: 'Stagiaire DevOps & Cloud' },
   'experience.org1': { en: 'Cloudnet Hosting (Felcloud), Tunisia', fr: 'Cloudnet Hosting (Felcloud), Tunisie' },
   'experience.point1_1': {
-    en: 'Automated the end-to-end deployment of Mailcow OSS on OpenStack VMs using modular Ansible roles (Docker, Mailcow, HAProxy, dnsmasq), reducing the full setup to a single playbook run',
-    fr: 'Automatisation du déploiement de Mailcow OSS sur VMs OpenStack avec des rôles Ansible modulaires (Docker, Mailcow, HAProxy, dnsmasq), réduisant l\'installation à un seul playbook'
+  en: 'Automated the end-to-end deployment of Mailcow OSS on OpenStack VMs using modular Ansible roles (Docker, Mailcow, HAProxy, dnsmasq), reducing the full setup to a single playbook run',
+  fr: 'Automatisation du déploiement bout-en-bout de Mailcow OSS sur VMs OpenStack via des rôles Ansible modulaires (Docker, Mailcow, HAProxy, dnsmasq), ramenant l\'installation complète à un seul playbook'
   },
   'experience.point1_2': {
-    en: 'Exposed services publicly via HAProxy on a bastion host, and configured OpenStack security groups for external access',
-    fr: 'Exposition des services via HAProxy sur un bastion, et configuration des groupes de sécurité OpenStack pour l\'accès externe'
+    en: 'Deployed HAProxy on a bastion host to reverse-proxy containerized services from a private network to the public internet, and set up dnsmasq for internal hostname resolution across VMs',
+    fr: 'Déploiement de HAProxy sur un bastion pour exposer les services conteneurisés depuis un réseau privé, et configuration de dnsmasq pour la résolution DNS interne entre les VMs'
   },
   'experience.point1_3': {
-    en: 'Integrated Mailcow with Odoo ERP over SMTP/IMAP and with Authentik SSO using OAuth2 and OpenID Connect',
-    fr: 'Intégration de Mailcow avec Odoo ERP via SMTP/IMAP et avec Authentik SSO via OAuth2 et OpenID Connect'
+    en: 'Integrated Mailcow with Odoo ERP via SMTP/IMAP for internal email communication, and with Authentik as an OAuth2/OpenID Connect provider for centralized Single Sign-On across services',
+    fr: 'Intégration de Mailcow avec Odoo ERP via SMTP/IMAP pour la communication interne, et avec Authentik comme fournisseur OAuth2/OpenID Connect pour un SSO centralisé entre les services'
   },
   'experience.period2': { en: 'Jul 2024 - Aug 2024', fr: 'Juillet 2024 - Août 2024' },
   'experience.role2': { en: 'Networking Intern', fr: 'Stagiaire Réseaux' },
@@ -381,6 +417,93 @@ export const translations: Record<TranslationKey, Record<Language, string>> = {
     en: 'Documented the network architecture and delivered a technical report covering design choices, configuration steps, and validation tests',
     fr: 'Documentation de l\'architecture réseau et remise d\'un rapport technique couvrant les choix de conception, les étapes de configuration et les tests de validation'
   },
+// Education
+'education.title': { en: 'Education', fr: 'Formation' },
+'education.period1': { en: '2024 – Present', fr: '2024 – Présent' },
+'education.school1': {
+  en: 'National Institute of Applied Sciences and Technology (INSAT)',
+  fr: 'Institut National des Sciences Appliquées et de Technologie (INSAT)'
+},
+'education.program1': {
+  en: 'Engineering Cycle – Computer Networks & Telecommunications',
+  fr: 'Cycle Ingénieur – Réseaux Informatiques et Télécommunications'
+},
+'education.period2': { en: '2022 – 2024', fr: '2022 – 2024' },
+'education.school2': {
+  en: 'National Institute of Applied Sciences and Technology (INSAT)',
+  fr: 'Institut National des Sciences Appliquées et de Technologie (INSAT)'
+},
+'education.program2': {
+  en: 'Preparatory Cycle',
+  fr: 'Cycle Préparatoire'
+},
+
+// Associations
+'associations.title': { en: 'Associations & Involvement', fr: 'Associations & Implication' },
+
+'associations.jeinsat.name': { en: 'Junior Entreprise INSAT', fr: 'Junior Entreprise INSAT' },
+'associations.jeinsat.role': { en: 'General Secretary – Mandate 2024/2025', fr: 'Secrétaire Général – Mandat 2024/2025' },
+'associations.jeinsat.period': { en: '2024 – 2025', fr: '2024 – 2025' },
+'associations.jeinsat.description': {
+  en: 'Board member of a 100+ member student association, part of an international movement, whose mission is to bridge university students with the professional world through software project delivery and formal events.',
+  fr: 'Membre du bureau d\'une association étudiante de plus de 100 membres, faisant partie d\'un mouvement international, dont la mission est de rapprocher les étudiants du monde professionnel via des projets logiciels et des événements formels.'
+},
+'associations.jeinsat.highlight1': {
+  en: 'Managed association documentation, archiving, and internal process workflows',
+  fr: 'Responsable de toute la documentation, l\'archivage et les flux de processus internes'
+},
+'associations.jeinsat.highlight2': {
+  en: 'Ensured legal compliance and adherence to national federation regulations',
+  fr: 'Assurance de la conformité légale et du respect des règlements de la fédération nationale'
+},
+'associations.jeinsat.highlight3': {
+  en: 'Managed formal internal and external communications via official channels',
+  fr: 'Gestion de toutes les communications formelles internes et externes via les canaux officiels'
+},
+'associations.jeinsat.highlight4': {
+  en: 'Coordinated board members through structured meetings, agendas, and assemblies',
+  fr: 'Coordination des membres du bureau via des réunions structurées, ordres du jour et assemblées'
+},
+'associations.jeinsat.highlight5': {
+  en: 'Contributed to strategic decisions, event organization, and software project delivery',
+  fr: 'Contribution aux décisions stratégiques, à l\'organisation d\'événements et à la livraison de projets logiciels'
+},
+
+'associations.acm.name': { en: 'ACM INSAT Chapter', fr: 'Chapitre ACM INSAT' },
+'associations.acm.role': { en: 'Sysadmin Team Member', fr: 'Membre de l\'équipe Sysadmin' },
+'associations.acm.period': { en: '2023 – 2025', fr: '2023 – 2025' },
+'associations.acm.description': {
+  en: 'Part of the technical Sysadmin team supporting competitive programming events organized by the ACM chapter at INSAT.',
+  fr: 'Membre de l\'équipe technique Sysadmin soutenant les événements de programmation compétitive organisés par le chapitre ACM à l\'INSAT.'
+},
+'associations.acm.highlight1': {
+  en: 'Configured and managed local networks for competitive programming competitions',
+  fr: 'Configuration et gestion des réseaux locaux pour les compétitions de programmation'
+},
+'associations.acm.highlight2': {
+  en: 'Handled technical setup and on-site support during contest events',
+  fr: 'Gestion de la configuration technique et support sur site lors des compétitions'
+},
+
+'associations.securinets.name': { en: 'Securinets INSAT', fr: 'Securinets INSAT' },
+'associations.securinets.role': { en: 'Active Member – CTF Player', fr: 'Membre Actif – Joueur CTF' },
+'associations.securinets.period': { en: '2023 – 2025', fr: '2023 – 2025' },
+'associations.securinets.description': {
+  en: 'Active member of INSAT\'s cybersecurity club, competing in CTF challenges and contributing to event organization.',
+  fr: 'Membre actif du club de cybersécurité de l\'INSAT, participant à des CTF et contribuant à l\'organisation d\'événements.'
+},
+'associations.securinets.highlight1': {
+  en: 'Competed in CTF competitions across forensics, web exploitation, and cryptography categories',
+  fr: 'Participation à des CTF dans les catégories forensics, exploitation web et cryptographie'
+},
+'associations.securinets.highlight2': {
+  en: 'Developed investigative and low-level problem-solving skills through hands-on challenges',
+  fr: 'Développement de compétences analytiques et de résolution de problèmes via des défis pratiques'
+},
+'associations.securinets.highlight3': {
+  en: 'Contributed to the organization of cybersecurity events',
+  fr: 'Contribution à l\'organisation d\'événements'
+},
   // Footer
   'footer.built': { en: 'Built by', fr: 'Conçu par' },
   'footer.source': { en: 'Source Code', fr: 'Code Source' },

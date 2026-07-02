@@ -14,17 +14,19 @@
 
 ## Overview
 
-Personal portfolio website built with Angular 21. Showcases skills, projects, certifications, and experience as an ICT Engineering student specializing in Networks and Telecommunications, with a focus on DevOps and Cloud Infrastructure.
+Personal portfolio website built with Angular 21. Showcases skills, projects, certifications, and experience as a Networks and Telecommunications Engineering student specializing in DevOps and Cloud Infrastructure.
 
 ## Features
 
 - Interactive grid background with cursor-following glow effect
 - Fully responsive across all devices
-- Dark theme with custom color accents
+- Dark/Light theme toggle with smooth transitions
 - Smooth animations and scrolling
+- French/English language toggle
 - Skills and certifications with Iconify icons
 - Project showcase with GitHub links
-- French/English language toggle
+- Education and Internship timeline
+- Associations & involvement section
 - Contact section
 
 ## Tech Stack
@@ -45,15 +47,18 @@ src/
 │   ├── layouts/
 │   │   └── main-layout/
 |   ├── pipes/
-|   ├── services/
 │   ├── sections/
-│   │   ├── about/
-│   │   ├── certifications/
-│   │   ├── contact/
-│   │   ├── experience/
 │   │   ├── hero/
+│   │   ├── about/
+│   │   ├── experience/
+│   │   ├── education/
+│   │   ├── certifications/
+│   │   ├── skills/
 │   │   ├── projects/
-│   │   └── skills/
+│   │   └── contact/
+|   |── services/
+│   │   ├── theme/
+│   │   ├── translation/
 │   ├── shared/
 │   │   ├── footer/
 │   │   └── navbar/
