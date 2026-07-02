@@ -4,12 +4,10 @@
   <meta charset="utf-8">
   <title>Amal Sboui - Portfolio</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"">
-    <!--  
-  <link rel="icon" type="image/svg+xml" href="https://api.dicebear.com/9.x/lorelei/svg?seed=DevOps&hairVariant=variant02&clothingColor=bd00ff"/>
--->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+
   <style>
-    /* Runs before any JS to prevent flash of raw HTML */
+    /* loading styling before angular */
     *, *::before, *::after { box-sizing: border-box; }
     body {
       margin: 0;
@@ -22,27 +20,20 @@
     #initial-loader {
       position: fixed;
       inset: 0;
-      background: #14151f;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #14151f;
+      background-image:
+        linear-gradient(rgba(124, 147, 212, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124, 147, 212, 0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
       z-index: 99999;
-      transition: opacity 0.4s ease;
+      transition: opacity 0.5s ease;
     }
     #initial-loader.fade-out {
       opacity: 0;
       pointer-events: none;
     }
-    .init-spinner {
-      width: 32px;
-      height: 32px;
-      border: 2px solid rgba(124, 147, 212, 0.15);
-      border-top-color: #7c93d4;
-      border-radius: 50%;
-      animation: init-spin 0.8s linear infinite;
-    }
-    @keyframes init-spin { to { transform: rotate(360deg); } }
   </style>
+
   <link rel="icon" type="image/png" href="assets/images/icon-amal-right.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,10 +41,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
+
 <body>
-  <div id="initial-loader">
-    <div class="init-spinner"></div>
-  </div>
+  <div id="initial-loader"></div>
   <app-root></app-root>
 </body>
 </html>
