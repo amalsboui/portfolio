@@ -1,6 +1,6 @@
 <header
   class="sticky top-0 z-50 border-b"
-  style="background: var(--navbar-bg); border-color: var(--border); position: relative; z-index: 50; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+  style="background: var(--navbar-bg); border-color: var(--border); box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
 
   <nav class="max-w-5xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
 
@@ -45,15 +45,25 @@
       </li>
     </ul>
 
-    <!-- Mobile toggle - larger icons -->
+    <!-- Mobile toggle  -->
     <button
-      class="md:hidden cursor-pointer bg-transparent border-none flex items-center gap-2 p-2"
-      (click)="toggleMenu()"
-      aria-label="Toggle menu">
-      <span style="font-family:'Space Mono',monospace; color:var(--text); font-size:1.2rem; font-weight: 500;">
-        {{ menuOpen() ? '✕' : '☰' }}
-      </span>
-    </button>
+  class="md:hidden bg-transparent border-none flex items-center justify-center"
+  (click)="toggleMenu()"
+  aria-label="Toggle menu"
+  style="
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 60;
+  ">
+  <span style="font-family:'Space Mono',monospace; color:var(--text); font-size:1.2rem; font-weight:500; pointer-events:none;">
+    {{ menuOpen() ? '✕' : '☰' }}
+  </span>
+</button>
 
   </nav>
 

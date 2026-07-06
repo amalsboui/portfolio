@@ -3,7 +3,7 @@
 
 @import "tailwindcss";
 
-:root {
+[data-theme="dark"] {
   /* Dark mode (default) */
    --bg:        #14151f;   
   --surface:   #1c1e2b;
