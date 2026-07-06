@@ -18,6 +18,16 @@
   </script>
 
   <style>
+    /* Hide app-root until Angular loads */
+    app-root {
+      display: block;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    app-root.loaded {
+      opacity: 1;
+    }
     /* loading styling before angular */
     *, *::before, *::after { box-sizing: border-box; }
     body {
