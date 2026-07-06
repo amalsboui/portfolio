@@ -16,7 +16,7 @@
       localStorage.setItem('theme', 'dark');
     }
   </script>
-  
+
   <style>
     /* loading styling before angular */
     *, *::before, *::after { box-sizing: border-box; }
@@ -50,6 +50,13 @@
       transform: translateZ(0);
       transition: opacity 0.5s ease;
     }
+     [data-theme="light"] #initial-loader {
+    background-color: #f5efe8;
+    background-image:
+      linear-gradient(rgba(107, 140, 174, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(107, 140, 174, 0.06) 1px, transparent 1px);
+  }
+
     #initial-loader.fade-out {
       opacity: 0;
       pointer-events: none;
@@ -64,6 +71,13 @@
       border-right-color: #d88fb0;
       animation: ring-spin 0.9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
+
+     [data-theme="light"] .ring {
+    border: 4px solid rgba(107, 140, 174, 0.15);
+    border-top-color: #6b8cae;
+    border-right-color: #e8b0c0;
+  }
+
     @keyframes ring-spin {
       to { transform: rotate(360deg); }
     }
