@@ -108,7 +108,6 @@ export class Skills {
       accent: 'var(--blue)',
       items: [
         { name: 'Angular', icon: 'mdi:angular' },
-        { name: 'React', icon: 'mdi:react' },
       ]
     },
     {

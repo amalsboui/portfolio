@@ -66,6 +66,9 @@ body {
   background-size: 48px 48px;
   background-position: 0 0;
   transition: background-color 0.3s ease, color 0.3s ease;
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
 }
 
 body::before {
