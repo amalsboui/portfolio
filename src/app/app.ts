@@ -1,4 +1,4 @@
-import { Component, signal, HostListener, Renderer2, OnInit, AfterViewInit } from '@angular/core';
+import { Component, HostListener, Renderer2, OnInit, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Hero } from './sections/hero/hero';
 import { About } from './sections/about/about';
@@ -57,15 +57,21 @@ export class App  implements OnInit, AfterViewInit {
         }
       }
   }
-  ngAfterViewInit() {
-    if ((window as any).__loaderDismiss) {
-    (window as any).__loaderDismiss();
-  }
+ngAfterViewInit() {
 
-    setTimeout(() => {
-      this.loaded = true;
-    }, 100);
-  }
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      if ((window as any).__loaderDismiss) {
+        (window as any).__loaderDismiss();
+      }
+    });
+  });
+
+  setTimeout(() => {
+    this.loaded = true;
+  }, 100);
+}
+
   ngOnInit() {
   
   }

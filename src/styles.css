@@ -3,6 +3,28 @@
 
 @import "tailwindcss";
 
+:root {
+  --bg:          #14151f;
+  --surface:     #1c1e2b;
+  --border:      #2e3148;
+  --blue:        #7c93d4;
+  --plum:        #6d597a;
+  --rose:        #b56576;
+  --pink:        #d88fb0;
+  --text:        #dcdde8;
+  --muted:       #8587a3;
+  --accent-warm: #f4a261;
+  --grid-color:  rgba(124, 147, 212, 0.06);
+  --navbar-bg:   #14151f;
+  --footer-bg:   #14151f;
+  --logo-color:  #d88fb0;
+  --logo-hyphen: #7c93d4;
+  --card-shadow: 0 8px 30px rgba(124, 147, 212, 0.08);
+  --badge-bg:    rgba(124, 147, 212, 0.08);
+  --badge-border:rgba(124, 147, 212, 0.15);
+  --noise-opacity: 0.3;
+}
+
 [data-theme="dark"] {
   /* Dark mode (default) */
    --bg:        #14151f;   
