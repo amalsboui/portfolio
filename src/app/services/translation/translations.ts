@@ -172,8 +172,8 @@ export const translations: Record<TranslationKey, Record<Language, string>> = {
   'hero.title': { en: 'Amal Sboui', fr: 'Amal Sboui' },
   'hero.subtitle': { en: 'ICT Engineering Student', fr: 'Étudiante ingénieure en Réseaux et Télécommunications' },
   'hero.description': {
-    en: 'I design, build, and automate cloud infrastructure, pipelines, containers, and everything in between.',
-    fr: 'Je conçois, construis et automatise l\'infrastructure cloud, les pipelines, les conteneurs et tout ce qui se trouve entre les deux.'
+    en: 'I like understanding how systems work and figuring out how to make them better.',
+    fr: 'J’aime comprendre comment les systèmes fonctionnent et trouver des moyens de les améliorer.'
   },
   'hero.projects': { en: 'View projects', fr: 'Voir les projets' },
   'hero.contact': { en: 'Get in touch', fr: 'Me contacter' },
@@ -183,8 +183,8 @@ export const translations: Record<TranslationKey, Record<Language, string>> = {
   // About
   'about.title': { en: 'About', fr: 'À propos' },
   'about.description': {
-    en: "I'm a fourth-year Networking and Telecommunications Engineering student at INSAT. What pulls me in is the architecture side of infrastructure: why a system holds up under load, what breaks first when it doesn't, and how a few good design decisions early on prevent a lot of pain later. Most of my projects end up being a way to dig into that, through infrastructure as code, CI/CD pipelines, container orchestration, and observability stacks, on AWS, Azure, and self-hosted setups alike.",
-    fr: "Je suis étudiante en 4ème année d'ingénierie Réseaux et Télécommunications à l'INSAT. Ce qui m'attire, c'est l'architecture des systèmes : pourquoi un système tient sous charge, ce qui casse en premier, et comment de bonnes décisions de conception évitent beaucoup de problèmes. La plupart de mes projets explorent ces aspects à travers l'infrastructure as code, les pipelines CI/CD, l'orchestration de conteneurs et les stacks d'observabilité, sur AWS, Azure et des environnements auto-hébergés."
+    en: "I've always loved digging around and figuring out how things work. That curiosity naturally led me toward cloud infrastructure, where every system brings new challenges to understand, troubleshoot, and improve.\n\nI enjoy discovering new tools and concepts, connecting the dots between them, and finding practical solutions to problems. Whether it's automating a deployment, troubleshooting an issue, or improving an existing setup, I like building systems that are reliable, structured, and maintainable.\n\nI'm a fifth-year Networking and Telecommunications Engineering student at INSAT, focusing on Cloud, DevOps, and Site Reliability Engineering. I enjoy working with infrastructure, automation, containers, networking, and observability while continuously exploring new technologies.\n\nI don't believe anything is too complex to understand. With curiosity, persistence, and the willingness to dig deeper, there is always a way to figure things out.",
+    fr: "J’ai toujours aimé chercher, explorer et comprendre comment les choses fonctionnent. Cette curiosité m’a naturellement menée vers l’infrastructure cloud, où chaque système apporte de nouveaux défis à comprendre, résoudre et améliorer.\n\nJ’aime découvrir de nouveaux outils et concepts, comprendre comment ils s’intègrent ensemble et trouver des solutions concrètes aux problèmes rencontrés. Qu’il s’agisse d’automatiser un déploiement, de résoudre un problème ou d’améliorer une architecture existante, j’aime construire des systèmes fiables, structurés et faciles à maintenir.\n\nJe suis actuellement en cinquième année d’ingénierie Réseaux et Télécommunications à l’INSAT, avec un intérêt particulier pour le Cloud, le DevOps et le Site Reliability Engineering. Je travaille autour de l’infrastructure, de l’automatisation, des conteneurs, des réseaux et de l’observabilité, tout en continuant à explorer de nouvelles technologies.\n\nJe ne pense pas qu’un sujet soit trop complexe à comprendre. Avec de la curiosité, de la persévérance et l’envie d’aller plus loin, il y a toujours un moyen de trouver une solution."
   },
   'about.education': { en: 'Education', fr: 'Formation' },
   'about.certified': { en: 'Certified', fr: 'Certifiée' },
