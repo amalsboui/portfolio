@@ -65,6 +65,13 @@ export type TranslationKey =
   | 'project.securesight.highlight3'
   | 'project.securesight.highlight4'
   | 'project.securesight.highlight5'
+  // Projects - Guardrails
+  | 'project.guardrails.name'
+  | 'project.guardrails.description'
+  | 'project.guardrails.highlight1'
+  | 'project.guardrails.highlight2'
+  | 'project.guardrails.highlight3'
+  | 'project.guardrails.highlight4'
   // Projects - Observability
   | 'project.observability.name'
   | 'project.observability.description'
@@ -127,6 +134,12 @@ export type TranslationKey =
   | 'experience.point2_1'
   | 'experience.point2_2'
   | 'experience.point2_3'
+  | 'experience.period3'
+  | 'experience.role3'
+  | 'experience.org3'
+  | 'experience.point3_1'
+  | 'experience.point3_2'
+  | 'experience.point3_3'
     // Associations
   | 'associations.title'
   | 'associations.jeinsat.name'
@@ -256,6 +269,35 @@ export const translations: Record<TranslationKey, Record<Language, string>> = {
   'project.securesight.highlight5': {
     en: 'Tetragon (eBPF-based) deployed for kernel-level runtime security monitoring, catching suspicious syscall behavior that application-level monitoring alone would miss',
     fr: 'Tetragon (basé sur eBPF) déployé pour la surveillance de sécurité au niveau du noyau, détectant les comportements suspects d\'appels système que la surveillance au niveau application ne verrait pas'
+  },
+
+  // Projects - Guardrails
+
+  'project.guardrails.name': { en: 'Guardrails', fr: 'Guardrails' },
+
+  'project.guardrails.description': {
+    en: 'A secure GitOps and DevSecOps platform for deploying Mattermost on Kubernetes, with automated security guardrails validating changes before they reach the cluster.',
+    fr: 'Une plateforme GitOps et DevSecOps sécurisée pour le déploiement de Mattermost sur Kubernetes, avec des garde-fous de sécurité automatisés validant les changements avant leur déploiement sur le cluster.'
+  },
+
+  'project.guardrails.highlight1': {
+    en: 'Built a GitOps deployment workflow with ArgoCD and Helm, using separate application and cluster-state repositories so infrastructure changes remain version-controlled and auditable',
+    fr: 'Mise en place d’un workflow de déploiement GitOps avec ArgoCD et Helm, utilisant des dépôts séparés pour l’application et l’état du cluster afin de garantir des changements versionnés et traçables'
+  },
+
+  'project.guardrails.highlight2': {
+    en: 'Implemented automated DevSecOps guardrails with Gitleaks, Kubeconform, Trivy, and OPA/Conftest to detect leaked secrets, invalid manifests, vulnerabilities, and policy violations before deployment',
+    fr: 'Mise en place de garde-fous DevSecOps automatisés avec Gitleaks, Kubeconform, Trivy et OPA/Conftest pour détecter les secrets exposés, manifests invalides, vulnérabilités et violations de politiques avant le déploiement'
+  },
+
+  'project.guardrails.highlight3': {
+    en: 'Integrated HashiCorp Vault and External Secrets Operator for centralized secrets management, using Kubernetes authentication instead of static credentials',
+    fr: 'Intégration de HashiCorp Vault et External Secrets Operator pour une gestion centralisée des secrets, avec authentification Kubernetes au lieu de credentials statiques'
+  },
+
+  'project.guardrails.highlight4': {
+    en: 'Added runtime security monitoring with Falco and eBPF to detect suspicious behavior inside running containers, complementing the pre-deployment security checks',
+    fr: 'Ajout d’une surveillance de sécurité à l’exécution avec Falco et eBPF pour détecter les comportements suspects dans les conteneurs en cours d’exécution, en complément des contrôles de sécurité pré-déploiement'
   },
 
   // Projects - Observability
@@ -388,33 +430,49 @@ export const translations: Record<TranslationKey, Record<Language, string>> = {
 
   // Experience
   'experience.title': { en: 'Experience', fr: 'Expérience' },
-  'experience.period1': { en: 'Jul 2025 – Aug 2025', fr: 'Juillet 2025 – Août 2025' },
-  'experience.role1': { en: 'DevOps & Cloud Intern', fr: 'Stagiaire DevOps & Cloud' },
-  'experience.org1': { en: 'Cloudnet Hosting (Felcloud), Tunisia', fr: 'Cloudnet Hosting (Felcloud), Tunisie' },
+  'experience.period1': { en: 'Jul 2026 – Aug 2026', fr: 'Juillet 2026 – Août 2026' },
+  'experience.role1': { en: 'Platform Engineering & DevOps Intern', fr: 'Stagiaire Platform Engineering & DevOps' },
+  'experience.org1': { en: 'Persista Technology, Tunisia', fr: 'Persista Technology, Tunisie' },
   'experience.point1_1': {
-  en: 'Automated the end-to-end deployment of Mailcow OSS on OpenStack VMs using modular Ansible roles (Docker, Mailcow, HAProxy, dnsmasq), reducing the full setup to a single playbook run',
-  fr: 'Automatisation du déploiement bout-en-bout de Mailcow OSS sur VMs OpenStack via des rôles Ansible modulaires (Docker, Mailcow, HAProxy, dnsmasq), ramenant l\'installation complète à un seul playbook'
+    en: 'Containerized and deployed a full-stack application in a production environment using Docker and Docker Compose, and built a GitHub Actions CI/CD pipeline for automated validation, security scanning, image publishing, and deployment',
+    fr: 'Conteneurisation et déploiement d’une application full-stack en environnement de production avec Docker et Docker Compose, et mise en place d’un pipeline CI/CD GitHub Actions pour la validation automatisée, l’analyse de sécurité, la publication des images et le déploiement'
   },
   'experience.point1_2': {
-    en: 'Deployed HAProxy on a bastion host to reverse-proxy containerized services from a private network to the public internet, and set up dnsmasq for internal hostname resolution across VMs',
-    fr: 'Déploiement de HAProxy sur un bastion pour exposer les services conteneurisés depuis un réseau privé, et configuration de dnsmasq pour la résolution DNS interne entre les VMs'
+  en: 'Automated the provisioning and configuration of production VPS infrastructure using Infrastructure as Code and Ansible, including Docker, Nginx, SSL, firewall and SSH security, with production deployments protected by manual approval',
+  fr: 'Automatisation du provisionnement et de la configuration de l’infrastructure VPS de production avec Infrastructure as Code et Ansible, incluant Docker, Nginx, SSL, pare-feu et sécurisation SSH, avec des déploiements en production protégés par une approbation manuelle'
   },
+
   'experience.point1_3': {
-    en: 'Integrated Mailcow with Odoo ERP via SMTP/IMAP for internal email communication, and with Authentik as an OAuth2/OpenID Connect provider for centralized Single Sign-On across services',
-    fr: 'Intégration de Mailcow avec Odoo ERP via SMTP/IMAP pour la communication interne, et avec Authentik comme fournisseur OAuth2/OpenID Connect pour un SSO centralisé entre les services'
+    en: 'Implemented Prometheus and Grafana monitoring, Alertmanager alerting, and application backups, and documented the deployment setup as a reusable deployment template for future applications',
+    fr: 'Mise en place du monitoring avec Prometheus et Grafana, de l’alerting avec Alertmanager et des sauvegardes applicatives, avec documentation de l’environnement de déploiement sous forme de template réutilisable pour de futures applications'
   },
-  'experience.period2': { en: 'Jul 2024 - Aug 2024', fr: 'Juillet 2024 - Août 2024' },
-  'experience.role2': { en: 'Networking Intern', fr: 'Stagiaire Réseaux' },
-  'experience.org2': { en: 'Centre National de l\'Informatique (CNI), Tunisia', fr: 'Centre National de l\'Informatique (CNI), Tunisie' },
+  'experience.period2': { en: 'Jul 2025 – Aug 2025', fr: 'Juillet 2025 – Août 2025' },
+  'experience.role2': { en: 'DevOps & Cloud Intern', fr: 'Stagiaire DevOps & Cloud' },
+  'experience.org2': { en: 'Cloudnet Hosting (Felcloud), Tunisia', fr: 'Cloudnet Hosting (Felcloud), Tunisie' },
   'experience.point2_1': {
+    en: 'Automated the end-to-end deployment of Mailcow OSS on OpenStack VMs using modular Ansible roles (Docker, Mailcow, HAProxy, dnsmasq), reducing the full setup to a single playbook run',
+    fr: 'Automatisation du déploiement bout-en-bout de Mailcow OSS sur VMs OpenStack via des rôles Ansible modulaires (Docker, Mailcow, HAProxy, dnsmasq), ramenant l\'installation complète à un seul playbook'
+  },
+  'experience.point2_2': {
+      en: 'Deployed HAProxy on a bastion host to reverse-proxy containerized services from a private network to the public internet, and set up dnsmasq for internal hostname resolution across VMs',
+      fr: 'Déploiement de HAProxy sur un bastion pour exposer les services conteneurisés depuis un réseau privé, et configuration de dnsmasq pour la résolution DNS interne entre les VMs'
+  },
+  'experience.point2_3': {
+      en: 'Integrated Mailcow with Odoo ERP via SMTP/IMAP for internal email communication, and with Authentik as an OAuth2/OpenID Connect provider for centralized Single Sign-On across services',
+      fr: 'Intégration de Mailcow avec Odoo ERP via SMTP/IMAP pour la communication interne, et avec Authentik comme fournisseur OAuth2/OpenID Connect pour un SSO centralisé entre les services'
+    },
+  'experience.period3': { en: 'Jul 2024 - Aug 2024', fr: 'Juillet 2024 - Août 2024' },
+  'experience.role3': { en: 'Networking Intern', fr: 'Stagiaire Réseaux' },
+  'experience.org3': { en: 'Centre National de l\'Informatique (CNI), Tunisia', fr: 'Centre National de l\'Informatique (CNI), Tunisie' },
+  'experience.point3_1': {
     en: 'Designed and deployed a prototype network infrastructure for a three-story organization',
     fr: 'Conception et déploiement d\'une infrastructure réseau prototype pour une organisation de trois étages'
   },
-  'experience.point2_2': {
+  'experience.point3_2': {
     en: 'Configured routers, switches, VLANs, OSPF, static routing, and HSRP to ensure high availability and secure, optimized data flow',
     fr: 'Configuration des routeurs, switches, VLANs, OSPF, routage statique et HSRP pour garantir la haute disponibilité et un flux de données sécurisé et optimisé'
   },
-  'experience.point2_3': {
+  'experience.point3_3': {
     en: 'Documented the network architecture and delivered a technical report covering design choices, configuration steps, and validation tests',
     fr: 'Documentation de l\'architecture réseau et remise d\'un rapport technique couvrant les choix de conception, les étapes de configuration et les tests de validation'
   },

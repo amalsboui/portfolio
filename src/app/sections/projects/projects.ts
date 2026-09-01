@@ -38,6 +38,21 @@ export class Projects {
       diagramLayout: 'full'
     },
     {
+      nameKey: 'project.guardrails.name',
+      descriptionKey: 'project.guardrails.description',
+      highlightKeys: [
+        'project.guardrails.highlight1',
+        'project.guardrails.highlight2',
+        'project.guardrails.highlight3',
+        'project.guardrails.highlight4',
+        'project.guardrails.highlight5'
+      ],
+      tags: ['Kubernetes', 'ArgoCD', 'Helm', 'GitHub Actions', 'GitOps', 'DevSecOps', 'Vault', 'Falco', 'eBPF', 'OPA', 'Trivy', 'Gitleaks', 'Kubeconform'],
+      github: 'https://github.com/amalsboui/guardrails',
+      diagram: 'assets/images/pipeline_guardrails.png',
+      diagramLayout: 'full'
+    },
+    {
       nameKey: 'project.observability.name',
       descriptionKey: 'project.observability.description',
       highlightKeys: [

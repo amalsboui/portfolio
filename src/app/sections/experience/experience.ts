@@ -37,6 +37,16 @@ export class Experience {
         'experience.point2_2',
         'experience.point2_3'
       ]
+    },
+    {
+      periodKey: 'experience.period3',
+      roleKey: 'experience.role3',
+      orgKey: 'experience.org3',
+      pointKeys: [
+        'experience.point3_1',
+        'experience.point3_2',
+        'experience.point3_3'
+      ]
     }
   ];
 }
